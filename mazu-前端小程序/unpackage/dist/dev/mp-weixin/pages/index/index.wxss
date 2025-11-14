@@ -1,0 +1,311 @@
+.carousel.data-v-1cf27b2a {
+  margin-bottom: -200rpx;
+}
+.carousel .carouselSwiper.data-v-1cf27b2a {
+  width: 100%;
+  height: 600rpx;
+}
+.carousel .carouselSwiper .swiper-item.data-v-1cf27b2a {
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+}
+.carousel .carouselSwiper .swiper-item image.data-v-1cf27b2a {
+  width: 100%;
+  height: 900rpx;
+}
+.carousel .carouselSwiper .swiper-item .gradient-overlay.data-v-1cf27b2a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #fffbf2 100%);
+}
+.container.data-v-1cf27b2a {
+  position: relative;
+  width: 95%;
+  margin: auto;
+}
+.container .show.data-v-1cf27b2a {
+  width: 98%;
+  margin: auto;
+  height: 350rpx;
+  background-color: #fffbf2;
+  border-radius: 20rpx;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.container .show .backImage.data-v-1cf27b2a {
+  position: absolute;
+  width: 40%;
+  height: 150rpx;
+  top: 0%;
+  right: 0%;
+}
+.container .show .showInfo.data-v-1cf27b2a {
+  width: 400rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 30rpx;
+  line-height: 46rpx;
+  font-family: '妈祖祖庙' !important;
+}
+.container .show .showInfo .title.data-v-1cf27b2a {
+  font-weight: 500;
+  font-size: 52rpx;
+  color: #4d0000;
+}
+.container .show .showInfo .info.data-v-1cf27b2a {
+  font-size: 24rpx;
+  color: #838383;
+}
+.container .show .showBottom.data-v-1cf27b2a {
+  width: 95%;
+  height: 200rpx;
+  padding: 20rpx;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  z-index: 16;
+}
+.container .show .showBottom .showLeft.data-v-1cf27b2a {
+  position: relative;
+  height: 100%;
+  width: 30%;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.container .show .showBottom .showLeft image.data-v-1cf27b2a {
+  position: absolute;
+  bottom: 0%;
+  right: -10%;
+  width: 100%;
+  height: 100%;
+}
+.container .show .showBottom .showLeft text.data-v-1cf27b2a {
+  color: #7a0000;
+  -webkit-writing-mode: vertical-lr;
+          writing-mode: vertical-lr;
+  font-family: '妈祖祖庙' !important;
+  margin: 10rpx 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.container .show .showBottom .showRight.data-v-1cf27b2a {
+  height: 100%;
+  width: 65%;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+}
+.container .show .showBottom .showRight image.data-v-1cf27b2a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+.container .show .showBottom .showRight .text.data-v-1cf27b2a {
+  margin-top: 20rpx;
+}
+.container .show .showBottom .showRight .text view.data-v-1cf27b2a {
+  margin-top: -10rpx;
+}
+.container .show .showBottom .showRight .text view text.data-v-1cf27b2a {
+  color: #7a0000;
+  font-family: '妈祖祖庙' !important;
+  margin: 0 20rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.container .tabGrid.data-v-1cf27b2a {
+  margin: 40rpx 0;
+  width: 100%;
+  height: 280rpx;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20rpx;
+  justify-items: center;
+  align-items: center;
+  color: #565656;
+  font-family: '阿里妈妈方圆体2' !important;
+  font-weight: 600;
+}
+.container .tabGrid .item.data-v-1cf27b2a {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24rpx;
+}
+.container .tabGrid .item image.data-v-1cf27b2a {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+}
+.container .tabGrid .item .itemText.data-v-1cf27b2a {
+  transform: scale(0.9);
+}
+.container .moreContentTop.data-v-1cf27b2a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: '阿里妈妈数黑体 Bold' !important;
+  margin: 20rpx 0;
+}
+.container .moreContentTop .title.data-v-1cf27b2a {
+  font-size: 40rpx;
+}
+.container .moreContentTop .title .titleFirst.data-v-1cf27b2a {
+  position: relative;
+}
+.container .moreContentTop .title .titleFirst.data-v-1cf27b2a::before {
+  content: '';
+  position: absolute;
+  width: 2rpx;
+  height: 100%;
+  right: -20rpx;
+  background-color: #e8e8e8;
+}
+.container .moreContentTop .title .titleSecond.data-v-1cf27b2a {
+  margin-left: 40rpx;
+  color: #b4b4b4;
+  font-size: 30rpx;
+  font-family: 'siyuan' !important;
+  font-weight: 300 !important;
+}
+.container .moreContentTop .more.data-v-1cf27b2a {
+  font-size: 24rpx;
+  font-family: '阿里妈妈方圆体 VF Regular' !important;
+  font-weight: bold;
+}
+.container .moreContentTop .more.data-v-1cf27b2a::after {
+  content: '\203A';
+  font-size: 46rpx;
+  vertical-align: sub;
+}
+.container .mazuDynamics.data-v-1cf27b2a {
+  width: 95%;
+  margin: auto;
+}
+.container .mazuDynamics .mazuDynamics-bottom .scroll-view_H.data-v-1cf27b2a {
+  white-space: nowrap;
+  width: 100%;
+}
+.container .mazuDynamics .mazuDynamics-bottom .scroll-view-item_H.data-v-1cf27b2a {
+  display: inline-block;
+  width: 400rpx;
+  height: 300rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.container .mazuDynamics .mazuDynamics-bottom .scroll-view-item_H image.data-v-1cf27b2a {
+  width: 100%;
+  height: 100%;
+}
+.container .mazuDynamics .mazuDynamics-bottom .scroll-view-item_H .itemInfoText.data-v-1cf27b2a {
+  font-family: normal;
+  font-size: 24rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  color: #fff;
+  bottom: 5%;
+  left: 3%;
+  width: 370rpx;
+  overflow: hidden;
+}
+.container .mazuCulturalcreativity.data-v-1cf27b2a {
+  width: 95%;
+  margin: auto;
+  margin-top: 60rpx;
+}
+.container .mazuCulturalcreativity .mazuCulturalcreativity-bottom .scroll-view_H.data-v-1cf27b2a {
+  white-space: nowrap;
+  width: 100%;
+}
+.container .mazuCulturalcreativity .mazuCulturalcreativity-bottom .scroll-view-item_H.data-v-1cf27b2a {
+  display: inline-block;
+  width: 100%;
+  height: 400rpx;
+  text-align: center;
+  background-color: pink;
+  margin-right: 20rpx;
+  position: relative;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.container .mazuCulturalcreativity .mazuCulturalcreativity-bottom .scroll-view-item_H image.data-v-1cf27b2a {
+  width: 100%;
+  height: 100%;
+}
+.container .mazuCulturalcreativity .mazuCulturalcreativity-bottom .scroll-view-item_H .itemInfoText.data-v-1cf27b2a {
+  text-align: left;
+  font-family: normal;
+  font-size: 24rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  color: #fff;
+  bottom: 5%;
+  left: 5%;
+  width: 620rpx;
+  overflow: hidden;
+}
+.container .mazuCulturalcreativity .mazuCulturalcreativity-bottom .scroll-view-item_H .itemInfoText view.data-v-1cf27b2a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pubuBox.data-v-1cf27b2a {
+  margin-top: 10rpx;
+}
+.pubuItem.data-v-1cf27b2a {
+  column-count: 2;
+  column-gap: 20rpx;
+}
+.item-masonry.data-v-1cf27b2a {
+  border-radius: 15rpx;
+  overflow: hidden;
+  background-color: #fff;
+  break-inside: avoid;
+  /*避免在元素内部插入分页符*/
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  box-shadow: 0px 0px 28rpx 1rpx rgba(78, 101, 153, 0.14);
+}
+.item-masonry image.data-v-1cf27b2a {
+  width: 100%;
+}
+.listtitle.data-v-1cf27b2a {
+  padding-left: 22rpx;
+  padding-right: 22rpx;
+  font-size: 24rpx;
+  padding-bottom: 22rpx;
+}
+.listtitle .listtitle1.data-v-1cf27b2a {
+  line-height: 39rpx;
+}
+.listtitle .listtitle3.data-v-1cf27b2a {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #909399;
+  line-height: 32rpx;
+  padding-top: 22rpx;
+}
+.listtitle .listtitle3 image.data-v-1cf27b2a {
+  width: 32rpx;
+  margin-right: 10rpx;
+  height: 32rpx;
+  border-radius: 100%;
+}

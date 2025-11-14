@@ -1,0 +1,147 @@
+.content[data-v-6526118c] {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  font-family: "妈祖祖庙";
+  color: #4d0000;
+}
+.content uni-image[data-v-6526118c] {
+  position: absolute;
+  height: 31.25rem;
+  width: 100%;
+  top: -15.625rem;
+}
+.content uni-view[data-v-6526118c] {
+  position: relative;
+  text-align: center;
+  line-height: 7.8125rem;
+  font-size: 1.25rem;
+}
+.fiexdHeader[data-v-6526118c] {
+  position: fixed;
+  width: 100%;
+  height: 6.25rem;
+  background-color: #fffbf2;
+  z-index: 666;
+  color: #4d0000;
+  font-family: "妈祖祖庙";
+}
+.fiexdHeader uni-view[data-v-6526118c] {
+  line-height: 7.8125rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.content[data-v-e9b92a61]::before {
+  content: "";
+  height: 0.0625rem;
+  width: 100%;
+  position: absolute;
+  background-color: #00000014;
+}
+.content[data-v-e9b92a61] {
+  background-color: #fffbf2;
+  z-index: 999;
+  position: fixed;
+  height: 4.375rem;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+}
+.content .tabItem[data-v-e9b92a61] {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  margin-top: 0.625rem;
+}
+.content .tabItem .item[data-v-e9b92a61] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: #666;
+  transform: scale(0.9);
+}
+.content .tabItem .item.active[data-v-e9b92a61] {
+  color: #C92127;
+}
+.content .tabItem .item uni-image[data-v-e9b92a61] {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.isIos[data-v-e9b92a61] {
+  padding-bottom: 0.625rem;
+}
+
+.container[data-v-7c2ebfa5] {
+  position: relative;
+  top: 6.25rem;
+  width: 100%;
+  background-color: #FFFBF2;
+  border-radius: 1.25rem 1.25rem 0 0;
+  font-family: "阿里妈妈方圆体 VF Regular";
+}
+.container .userInfo[data-v-7c2ebfa5] {
+  padding: 1.25rem 0;
+  width: 95%;
+  margin: auto;
+}
+.container .userInfo .userHeader[data-v-7c2ebfa5] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #4d0000;
+}
+.container .userInfo .userHeader .headerLeft[data-v-7c2ebfa5] {
+  display: flex;
+  align-items: center;
+}
+.container .userInfo .userHeader .headerLeft uni-image[data-v-7c2ebfa5] {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 100%;
+}
+.container .userInfo .userHeader .headerLeft .name[data-v-7c2ebfa5] {
+  padding-left: 0.625rem;
+}
+.container .userInfo .userHeader .headerLeft .name uni-view[data-v-7c2ebfa5]:first-child {
+  font-size: 1.5625rem;
+}
+.container .userInfo .userHeader .headerLeft .name uni-view[data-v-7c2ebfa5]:last-child {
+  font-size: 0.75rem;
+}
+.container .userInfo .userHeader .headerRight[data-v-7c2ebfa5] {
+  font-size: 0.875rem;
+  padding: 0.3125rem 0.625rem;
+  color: #FFFBF2;
+  background-color: #4d0000;
+  border-radius: 0.3125rem;
+}
+.container .set[data-v-7c2ebfa5] {
+  width: 95%;
+  margin: auto;
+}
+.container .set .item[data-v-7c2ebfa5] {
+  height: 2.5rem;
+  border-bottom: 0.0625rem solid #dddad2;
+  line-height: 2.5rem;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.container .set .item .itemLeft uni-image[data-v-7c2ebfa5] {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  vertical-align: middle;
+}
+.container .set .item .itemRight[data-v-7c2ebfa5] {
+  position: relative;
+}
+.container .set .item .itemRight[data-v-7c2ebfa5]::after {
+  position: absolute;
+  content: "\203A";
+  font-size: 2.1875rem;
+  right: 0%;
+  top: -5%;
+}

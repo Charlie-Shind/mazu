@@ -1,0 +1,78 @@
+.content[data-v-e9b92a61]::before {
+  content: "";
+  height: 0.0625rem;
+  width: 100%;
+  position: absolute;
+  background-color: #00000014;
+}
+.content[data-v-e9b92a61] {
+  background-color: #fffbf2;
+  z-index: 999;
+  position: fixed;
+  height: 4.375rem;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+}
+.content .tabItem[data-v-e9b92a61] {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  margin-top: 0.625rem;
+}
+.content .tabItem .item[data-v-e9b92a61] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: #666;
+  transform: scale(0.9);
+}
+.content .tabItem .item.active[data-v-e9b92a61] {
+  color: #C92127;
+}
+.content .tabItem .item uni-image[data-v-e9b92a61] {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.isIos[data-v-e9b92a61] {
+  padding-bottom: 0.625rem;
+}
+
+.container[data-v-78a6de5a] {
+  position: relative;
+  height: calc(100vh - 7.8125rem);
+  width: 100%;
+  background-color: #fffbf1;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+.container .backImage[data-v-78a6de5a] {
+  width: 100%;
+  height: calc(100vh - 3.75rem);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+.container .zhangYiNa[data-v-78a6de5a] {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .qian[data-v-78a6de5a] {
+  height: 28.125rem;
+  z-index: 999;
+}
+.share[data-v-78a6de5a] {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 5%;
+  z-index: 999;
+  font-size: 1.625rem;
+  font-family: '阿里妈妈数黑体 Bold' !important;
+  font-weight: bold;
+}

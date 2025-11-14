@@ -1,0 +1,119 @@
+.content.data-v-56cee390 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 40rpx 0;
+}
+.content .newsInfo.data-v-56cee390 {
+  width: 90%;
+  margin: auto;
+  font-family: "妈祖祖庙" !important;
+}
+.content .newsInfo .title.data-v-56cee390 {
+  display: flex;
+  align-items: center;
+  color: #4d0000;
+  font-size: 36rpx;
+}
+.content .newsInfo .title image.data-v-56cee390 {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+.content .newsInfo .infoContent.data-v-56cee390 {
+  padding: 10rpx 0;
+  color: #9d9d9d;
+  font-size: 30rpx;
+  text-indent: 2em;
+}
+.content .sort.data-v-56cee390 {
+  width: 90%;
+  margin: auto;
+  height: 60rpx;
+}
+.content .news.data-v-56cee390 {
+  width: 90%;
+  margin: auto;
+}
+.content .news .title.data-v-56cee390 {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+.content .news .title.data-v-56cee390::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+.content .news .title view.data-v-56cee390 {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 30rpx;
+  font-family: "妈祖祖庙", sans-serif;
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  white-space: nowrap;
+}
+.content .news .title view.active.data-v-56cee390 {
+  color: #fff;
+  background-color: #4d0000;
+}
+.content .news .itemBox.data-v-56cee390 {
+  width: 100%;
+  height: 160rpx;
+  padding: 20rpx 0;
+}
+.content .news .itemBox .item.data-v-56cee390 {
+  width: 100%;
+  height: 160rpx;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .news .itemBox .item .itemLeft.data-v-56cee390 {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .news .itemBox .item .itemLeft .itemTitle.data-v-56cee390 {
+  font-family: "阿里妈妈方圆体 VF Regular" !important;
+  font-weight: bold;
+  margin-top: 25rpx;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 36rpx;
+}
+.content .news .itemBox .item .itemLeft .itemInfo.data-v-56cee390 {
+  color: #9d9d9d;
+  font-size: 24rpx;
+  margin-bottom: 25rpx;
+}
+.content .news .itemBox .item .itemRight.data-v-56cee390 {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .news .itemBox .item .itemRight image.data-v-56cee390 {
+  width: 140rpx;
+  height: 140rpx;
+}

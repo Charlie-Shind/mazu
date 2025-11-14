@@ -1,0 +1,166 @@
+.content.data-v-8cde6161 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 20rpx 0;
+  font-family: "阿里妈妈方圆体 VF Regular" !important;
+}
+.content .address.data-v-8cde6161 {
+  height: 160rpx;
+  width: 100%;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+.content .address .left.data-v-8cde6161 {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .address .left image.data-v-8cde6161 {
+  width: 50rpx;
+  height: 50rpx;
+}
+.content .address .center.data-v-8cde6161 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.content .address .center .one.data-v-8cde6161 {
+  font-size: 38rpx;
+  padding: 10rpx 0;
+}
+.content .address .center .one text.data-v-8cde6161 {
+  padding-right: 20rpx;
+}
+.content .address .center .two.data-v-8cde6161 {
+  font-size: 24rpx;
+}
+.content .address .center .two text.data-v-8cde6161 {
+  padding-right: 10rpx;
+}
+.content .address .right.data-v-8cde6161 {
+  width: 10%;
+}
+.content .address .right.data-v-8cde6161::after {
+  position: absolute;
+  content: "\203A";
+  font-size: 80rpx;
+  right: 3%;
+  top: 15%;
+}
+.content .info.data-v-8cde6161 {
+  padding: 20rpx 0;
+  width: 90%;
+  margin: auto;
+}
+.content .info .title.data-v-8cde6161 {
+  padding-bottom: 20rpx;
+}
+.content .info .shopInfo.data-v-8cde6161 {
+  display: flex;
+  justify-content: space-between;
+}
+.content .info .shopInfo image.data-v-8cde6161 {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.content .info .shopInfo .shopDetail.data-v-8cde6161 {
+  width: 72%;
+  font-weight: bold;
+}
+.content .info .shopInfo .shopDetail .border.data-v-8cde6161 {
+  padding: 20rpx 0;
+}
+.content .info .shopInfo .shopDetail .border text.data-v-8cde6161 {
+  font-size: 24rpx;
+  padding: 10rpx;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+  font-weight: normal;
+}
+.content .info .shopInfo .shopDetail .price.data-v-8cde6161 {
+  font-weight: bold;
+  color: #aa0000;
+}
+.content .info .shopInfo .shopDetail .price text.data-v-8cde6161 {
+  color: gray;
+  font-weight: normal;
+  font-size: 24rpx;
+}
+.content .separate.data-v-8cde6161 {
+  width: 100%;
+  height: 20rpx;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.content .count.data-v-8cde6161 {
+  width: 90%;
+  margin: auto;
+}
+.content .count view.data-v-8cde6161 {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.04);
+  width: 100%;
+  justify-content: space-between;
+}
+.content .count view input.data-v-8cde6161 {
+  font-size: 24rpx;
+  width: 87%;
+}
+.tab.data-v-8cde6161::before {
+  content: "";
+  height: 2rpx;
+  width: 100%;
+  position: absolute;
+  background-color: #00000014;
+}
+.tab.data-v-8cde6161 {
+  background-color: #fffbf2;
+  z-index: 999;
+  position: fixed;
+  height: 140rpx;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+}
+.tab .view.data-v-8cde6161 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 140rpx;
+  width: 90%;
+  margin: auto;
+}
+.tab .view .collection.data-v-8cde6161 {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.tab .view .collection text.data-v-8cde6161 {
+  color: #aa0000;
+  font-size: 48rpx;
+}
+.tab .view .buy.data-v-8cde6161 {
+  padding: 20rpx 40rpx;
+  background-color: #4d0000;
+  color: #fff;
+  border-radius: 20rpx;
+}
+.isIos.data-v-8cde6161 {
+  padding-bottom: 20rpx;
+}

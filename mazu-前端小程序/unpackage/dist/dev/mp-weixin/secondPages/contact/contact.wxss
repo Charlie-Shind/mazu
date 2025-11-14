@@ -1,0 +1,42 @@
+html {
+  background-color: #fff !important;
+}
+page {
+  background-color: #fff !important;
+}
+.content2 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fff;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 40rpx 0;
+}
+.content2 .wxImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50rpx 0;
+  position: relative;
+}
+.content2 .wxImage::after {
+  font-family: '阿里妈妈数黑体 Bold' !important;
+  content: '长按扫码添加开发者微信';
+  position: absolute;
+  bottom: 30rpx;
+  color: #666;
+  font-size: 32rpx;
+  text-align: center;
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  line-height: 200rpx;
+}
+.content2 .wxImage image {
+  height: 900rpx;
+  border-radius: 20rpx;
+  object-fit: contain;
+}

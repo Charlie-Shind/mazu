@@ -1,0 +1,121 @@
+.content.data-v-6a4f848d {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 20rpx 0;
+  font-family: "阿里妈妈方圆体 VF Regular" !important;
+}
+.content .noData.data-v-6a4f848d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 200rpx 0;
+}
+.content .noData view.data-v-6a4f848d {
+  font-size: 32rpx;
+  color: #4d0000;
+  font-weight: bold;
+}
+.content .clean.data-v-6a4f848d {
+  position: absolute;
+  right: 5%;
+  top: 40rpx;
+  color: #4d0000;
+  font-weight: bold;
+}
+.content .postInfo .postContent.data-v-6a4f848d {
+  padding: 40rpx 0;
+}
+.content .postInfo .postContent .item.data-v-6a4f848d {
+  padding: 20rpx 0;
+}
+.content .postInfo .postContent .item .itemContent.data-v-6a4f848d {
+  width: 90%;
+  margin: auto;
+}
+.content .postInfo .postContent .item .itemContent .header.data-v-6a4f848d {
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+  width: 100%;
+}
+.content .postInfo .postContent .item .itemContent .header image.data-v-6a4f848d {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+.content .postInfo .postContent .item .itemContent .info.data-v-6a4f848d {
+  padding: 20rpx 0;
+}
+.content .postInfo .postContent .item .itemContent .info text.data-v-6a4f848d {
+  color: #888888;
+}
+.content .postInfo .postContent .item .itemContent .container.data-v-6a4f848d {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.content .postInfo .postContent .item .itemContent .list.data-v-6a4f848d {
+  width: 32%;
+  aspect-ratio: 1;
+}
+.content .postInfo .postContent .item .itemContent .list image.data-v-6a4f848d {
+  width: 210rpx;
+  height: 210rpx;
+  border-radius: 10rpx;
+}
+.content .postInfo .postContent .item .itemContent .list.data-v-6a4f848d:not(:nth-child(3n)) {
+  margin-right: calc(5% / 3);
+}
+.content .postInfo .postContent .item .itemContent .list2.data-v-6a4f848d {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.content .postInfo .postContent .item .itemContent .list2 image.data-v-6a4f848d {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.content .postInfo .postContent .item .separate.data-v-6a4f848d {
+  margin: 40rpx 0 20rpx 0;
+  width: 100%;
+  height: 20rpx;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.content .delete-confirm.data-v-6a4f848d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .delete-confirm-content.data-v-6a4f848d {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.content .delete-confirm-buttons.data-v-6a4f848d {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.content .delete-confirm-button.data-v-6a4f848d {
+  padding: 8px 16px;
+  background-color: #4d0000;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0 8px;
+  cursor: pointer;
+}

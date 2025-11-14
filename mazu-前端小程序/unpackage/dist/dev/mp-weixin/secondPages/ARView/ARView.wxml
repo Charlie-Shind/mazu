@@ -1,0 +1,1 @@
+<view><coar-scene-component wx:if="{{r0}}" sceneId="8bd41e0ab83b4cf580eac7744db137db" bind:onARReady="handle" bind:onLoadedReady="handle" bind:onTrackerState="handle" bind:onObjectClick="handle" bind:onToolbarClick="handle" bind:onSceneInfo="handle" bind:onWatermarkClick="handle" u-t="m" u-i="46a252e6-0" bind:__l="__l"></coar-scene-component></view>

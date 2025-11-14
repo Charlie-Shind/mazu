@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "page-back": "../../components/title/title",
+    "tab-bar": "../../components/tabbar/tabbar"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="{{['content', 'data-v-e9b92a61', b && 'isIos']}}"><view class="tabItem data-v-e9b92a61"><view wx:for="{{a}}" wx:for-item="item" wx:key="c" class="{{['item', 'data-v-e9b92a61', item.d && 'active']}}" bindtap="{{item.e}}"><image class="data-v-e9b92a61" src="{{item.a}}" mode=""></image><view class="data-v-e9b92a61">{{item.b}}</view></view></view></view>

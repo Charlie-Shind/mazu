@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  height: calc(100vh - 250rpx);
+  width: 100%;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.container .backImage {
+  width: 100%;
+  height: calc(100vh - 120rpx);
+  float: left;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+.container .zhangYiNa {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .qian {
+  height: 700rpx;
+  width: 570rpx;
+  z-index: 999;
+}
+.qian.shake {
+  animation: shake 0.5s infinite;
+}
+.share {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 5%;
+  z-index: 999;
+  font-size: 52rpx;
+  font-family: '阿里妈妈数黑体 Bold' !important;
+  font-weight: bold;
+}
+@keyframes shake {
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(-10deg);
+}
+50% {
+    transform: rotate(10deg);
+}
+75% {
+    transform: rotate(-10deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}

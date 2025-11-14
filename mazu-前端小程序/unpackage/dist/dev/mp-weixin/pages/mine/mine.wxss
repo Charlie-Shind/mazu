@@ -1,0 +1,122 @@
+.sign.data-v-7c2ebfa5 {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sign image.data-v-7c2ebfa5 {
+  width: 100%;
+  margin-bottom: 200rpx;
+}
+.shade.data-v-7c2ebfa5 {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+}
+.shade image.data-v-7c2ebfa5 {
+  width: 100%;
+  transform: scale(1.5);
+  margin-bottom: 200rpx;
+}
+.container.data-v-7c2ebfa5 {
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  background-color: #FFFBF2;
+  border-radius: 40rpx 40rpx 0 0;
+  font-family: "阿里妈妈方圆体 VF Regular";
+}
+.container .userInfo.data-v-7c2ebfa5 {
+  padding: 40rpx 0;
+  width: 95%;
+  margin: auto;
+}
+.container .userInfo .login.data-v-7c2ebfa5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .userInfo .login .loginBtn.data-v-7c2ebfa5 {
+  width: 260rpx;
+  height: 80rpx;
+  background-color: #4d0000;
+  color: #FFFBF2;
+  font-size: 38rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100rpx;
+  margin: auto;
+  margin-top: 20rpx;
+}
+.container .userInfo .userHeader.data-v-7c2ebfa5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #4d0000;
+}
+.container .userInfo .userHeader .headerLeft.data-v-7c2ebfa5 {
+  display: flex;
+  align-items: center;
+}
+.container .userInfo .userHeader .headerLeft image.data-v-7c2ebfa5 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100%;
+}
+.container .userInfo .userHeader .headerLeft .name.data-v-7c2ebfa5 {
+  padding-left: 20rpx;
+}
+.container .userInfo .userHeader .headerLeft .name view.data-v-7c2ebfa5:first-child {
+  font-size: 50rpx;
+}
+.container .userInfo .userHeader .headerLeft .name view.data-v-7c2ebfa5:last-child {
+  font-size: 24rpx;
+}
+.container .userInfo .userHeader .headerRight.data-v-7c2ebfa5 {
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  color: #FFFBF2;
+  background-color: #4d0000;
+  border-radius: 10rpx;
+}
+.container .set.data-v-7c2ebfa5 {
+  width: 95%;
+  margin: auto;
+}
+.container .set .item.data-v-7c2ebfa5 {
+  height: 80rpx;
+  border-bottom: 2rpx solid #dddad2;
+  line-height: 80rpx;
+  padding: 16rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.container .set .item .itemLeft image.data-v-7c2ebfa5 {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.container .set .item .itemRight.data-v-7c2ebfa5 {
+  position: relative;
+}
+.container .set .item .itemRight.data-v-7c2ebfa5::after {
+  position: absolute;
+  content: "\203A";
+  font-size: 58rpx;
+  right: 0%;
+  top: 0%;
+}

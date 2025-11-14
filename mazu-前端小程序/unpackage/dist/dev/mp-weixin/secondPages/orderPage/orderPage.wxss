@@ -1,0 +1,79 @@
+.content.data-v-efc0c1aa {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 20rpx 0;
+  font-family: "阿里妈妈方圆体 VF Regular" !important;
+}
+.content .payMoney.data-v-efc0c1aa {
+  text-align: center;
+  padding: 40rpx 0;
+}
+.content .payMoney .money.data-v-efc0c1aa {
+  padding: 20rpx 0;
+  font-size: 56rpx;
+  font-weight: bold;
+  letter-spacing: 4rpx;
+}
+.content .payMoney .money text.data-v-efc0c1aa {
+  font-size: 40rpx;
+}
+.content .payToast.data-v-efc0c1aa {
+  text-align: center;
+  color: #8c0000;
+}
+.content .payMent.data-v-efc0c1aa {
+  width: 80%;
+  margin: auto;
+}
+.content .payMent .mentItem.data-v-efc0c1aa {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+  padding: 20rpx 0;
+}
+.content .payMent .mentItem.active .radio.active.data-v-efc0c1aa {
+  background-color: #4d0000;
+  border-color: #4d0000;
+}
+.content .payMent .mentItem image.data-v-efc0c1aa {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+}
+.content .payMent .mentItem .ment.data-v-efc0c1aa {
+  width: 70%;
+  text-align: left;
+  font-size: 34rpx;
+}
+.content .payMent .mentItem .radio.data-v-efc0c1aa {
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid #000;
+  border-radius: 100%;
+}
+.content .payButton.data-v-efc0c1aa {
+  padding: 40rpx 0;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .payButton view.data-v-efc0c1aa {
+  width: 70%;
+  height: 100rpx;
+  background-color: #4d0000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}

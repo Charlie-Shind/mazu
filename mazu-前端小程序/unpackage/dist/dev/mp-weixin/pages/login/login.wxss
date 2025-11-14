@@ -1,0 +1,44 @@
+.content {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  font-family: "妈祖祖庙" !important;
+}
+.content .imageBack {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.content .logo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.content .logo image {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 20rpx;
+}
+.content .logo .text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60rpx;
+}
+.content .loginBtn {
+  color: #4d0000;
+  font-size: 46rpx;
+  padding: 10rpx 20rpx;
+  width: 450rpx;
+  height: 80rpx;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100rpx;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,29 @@
+{
+    "id": "coar-scene",
+    "name": "微信小程序AR实现，手势AR、图像AR、平面AR，引入小程序插件即可使用，免开发",
+    "displayName": "微信小程序AR实现，手势AR、图像AR、平面AR，引入小程序插件即可使用，免开发",
+    "version": "8.1.1",
+    "description": "小程序AR解决方案，性能逼近原生，体验效果好，简单易用，渲染性能全网第二强（不让用最强）。  该插件轻量小巧，整体代码不到300KB。引入小程序插件即可使用，免开发",
+    "keywords": [
+        "AR",
+        "增强现实",
+        "小程序AR",
+        "VK",
+        "VisionKit"
+    ],
+    "dcloudext": {
+        "type": "js_sdk",
+        "sale": {
+            "regular": {
+                "price": "0.00"
+            },
+            "sourcecode": {
+                "price": "0.00"
+            }
+        }
+    },
+    "uni_modules": {
+        "dependencies": [],
+        "encrypt": []
+    }
+}
