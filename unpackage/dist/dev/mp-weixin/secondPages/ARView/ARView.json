@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "coar-scene-component": "plugin://coar/coar-scene-component"
+  }
+}

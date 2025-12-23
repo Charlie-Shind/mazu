@@ -1,0 +1,132 @@
+.content.data-v-97867ff4 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 20rpx 0;
+  font-family: "阿里妈妈方圆体 VF Regular" !important;
+}
+.content .noData.data-v-97867ff4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 200rpx 0;
+}
+.content .noData view.data-v-97867ff4 {
+  font-size: 32rpx;
+  color: #4d0000;
+  font-weight: bold;
+}
+.content .selectBar.data-v-97867ff4 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80rpx;
+}
+.content .selectBar .selectItem.data-v-97867ff4 {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s;
+}
+.content .selectBar .selectItem.active.data-v-97867ff4 {
+  transform: scale(1.3);
+  font-weight: bold;
+  color: #7a0000;
+  transition: transform 0.1s;
+}
+.content .orderList .item.data-v-97867ff4 {
+  width: 90%;
+  margin: auto;
+  padding: 40rpx 0;
+}
+.content .orderList .item .itemHeader.data-v-97867ff4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .orderList .item .itemHeader view.data-v-97867ff4 {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.content .orderList .item .itemHeader view image.data-v-97867ff4 {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+}
+.content .orderList .item .itemHeader text.data-v-97867ff4 {
+  font-size: 24rpx;
+  color: gray;
+}
+.content .orderList .item .itemCenter.data-v-97867ff4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  align-items: center;
+}
+.content .orderList .item .itemCenter .infoImage.data-v-97867ff4 {
+  width: 160rpx;
+  height: 160rpx;
+}
+.content .orderList .item .itemCenter .infoImage image.data-v-97867ff4 {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.content .orderList .item .itemCenter .info.data-v-97867ff4 {
+  width: 360rpx;
+}
+.content .orderList .item .itemCenter .info .infoTitle.data-v-97867ff4 {
+  font-size: 36rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-bottom: 10rpx;
+}
+.content .orderList .item .itemCenter .info .infoIntro.data-v-97867ff4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.content .orderList .item .itemCenter .price text.data-v-97867ff4 {
+  font-size: 42rpx;
+  font-weight: bold;
+}
+.content .orderList .item .itemBottom.data-v-97867ff4 {
+  padding-top: 20rpx;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.content .orderList .item .itemBottom .bottomItem.data-v-97867ff4 {
+  padding: 10rpx 20rpx;
+  border: rgba(0, 0, 0, 0.4) 2rpx solid;
+  border-radius: 20rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.separate.data-v-97867ff4 {
+  width: 100%;
+  height: 20rpx;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.redBorder.data-v-97867ff4 {
+  border: red 2rpx solid !important;
+  color: red;
+}
+.confirm.data-v-97867ff4 {
+  border: #7a0000 2rpx solid !important;
+  color: #fff;
+  background-color: #7a0000;
+}

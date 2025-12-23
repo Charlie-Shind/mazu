@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "祈福",
+  "usingComponents": {
+    "tab-bar": "../../components/tabbar/tabbar",
+    "incense-fab": "../../components/incense-fab/incense-fab",
+    "uni-popup": "../../uni_modules/uni-popup/components/uni-popup/uni-popup"
+  }
+}

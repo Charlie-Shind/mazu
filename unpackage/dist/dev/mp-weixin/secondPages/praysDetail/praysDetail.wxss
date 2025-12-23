@@ -1,0 +1,79 @@
+html {
+  background-color: #e2d8c4 !important;
+}
+page {
+  background-color: #e2d8c4 !important;
+}
+.content {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 40rpx 0;
+}
+.content .container {
+  width: 100%;
+  height: calc(100vh - 280rpx);
+  background-color: #e2d8c4;
+}
+.content .backImage {
+  width: 110%;
+  height: calc(100vh);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.content .zhangYiNa .text,
+.content .zhangYiNa image {
+  border-radius: 10rpx;
+  position: absolute;
+  z-index: 16;
+  width: 70%;
+  left: 50%;
+  top: 900rpx;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-indent: 2em;
+  overflow: scroll;
+}
+.content .zhangYiNa .text {
+  top: 950rpx;
+  height: 60%;
+  overflow: scroll;
+  line-height: 60rpx;
+  text-align: left;
+  font-family: '阿里妈妈方圆体 VF Regular' !important;
+  height: 950rpx;
+}
+.content .zhangYiNa .text::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.getIn {
+  animation: fadeIn 1s 1;
+}
+.getOut {
+  animation: fadeOut 1s 1;
+}
+/* 淡入淡出start */
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+@keyframes fadeOut {
+0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+}
+}

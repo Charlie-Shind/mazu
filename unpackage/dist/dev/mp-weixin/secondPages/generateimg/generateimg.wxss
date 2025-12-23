@@ -1,0 +1,352 @@
+.content.data-v-76a33e65 {
+  position: relative;
+  top: 160rpx;
+  width: 100%;
+  min-height: calc(100vh - 160rpx);
+  background-color: #f5f0e6;
+  overflow: hidden;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+}
+.content .ai-workshop.data-v-76a33e65 {
+  width: 100%;
+  box-sizing: border-box;
+}
+.content .ai-workshop .title-bar.data-v-76a33e65 {
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+.content .ai-workshop .sub-title.data-v-76a33e65 {
+  font-size: 28rpx;
+  color: #888;
+  margin-top: 10rpx;
+}
+.content .ai-workshop .param-box.data-v-76a33e65 {
+  background-color: #fff;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+.content .ai-workshop .param-item.data-v-76a33e65 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.content .ai-workshop .label.data-v-76a33e65 {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.content .ai-workshop .picker-btn.data-v-76a33e65,
+.content .ai-workshop .input.data-v-76a33e65 {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1px solid #eee;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.content .ai-workshop .generate-btn-container.data-v-76a33e65 {
+  position: relative;
+}
+.content .ai-workshop .generate-btn.data-v-76a33e65 {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #8b2323;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.content .ai-workshop .generate-btn.data-v-76a33e65::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loadingFlow-76a33e65 1.5s infinite;
+}
+@keyframes loadingFlow-76a33e65 {
+0% {
+    left: -100%;
+}
+100% {
+    left: 100%;
+}
+}
+.content .ai-workshop .generate-btn-hover.data-v-76a33e65 {
+  background-color: #6d1a1a;
+  transform: scale(1.02);
+}
+.content .ai-workshop .countdown-text.data-v-76a33e65 {
+  font-size: 28rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rpx 10rpx;
+  border-radius: 15rpx;
+  margin-left: 10rpx;
+}
+.content .ai-workshop .generating-tips.data-v-76a33e65 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rpx;
+  margin-top: 15rpx;
+}
+.content .ai-workshop .loading-dot.data-v-76a33e65 {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: #8b2323;
+  animation: dotBounce-76a33e65 1.4s infinite ease-in-out both;
+}
+@keyframes dotBounce-76a33e65 {
+0%,
+  80%,
+  100% {
+    transform: scale(0);
+}
+40% {
+    transform: scale(1);
+}
+}
+.content .ai-workshop .result-container.data-v-76a33e65 {
+  min-height: 400rpx;
+  margin-bottom: 40rpx;
+}
+.content .ai-workshop .result-box.data-v-76a33e65 {
+  position: relative;
+  background-color: #fff;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+.content .ai-workshop .close-btn.data-v-76a33e65 {
+  position: absolute;
+  top: 15rpx;
+  right: 15rpx;
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.content .ai-workshop .close-icon.data-v-76a33e65 {
+  font-size: 30rpx;
+  color: #999;
+  font-weight: bold;
+}
+.content .ai-workshop .result-title.data-v-76a33e65 {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+  display: block;
+  text-align: left;
+}
+.content .ai-workshop .result-img.data-v-76a33e65 {
+  width: 80%;
+  margin: 0 auto 30rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+.content .ai-workshop .action-buttons.data-v-76a33e65 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.content .ai-workshop .action-btn.data-v-76a33e65 {
+  width: 45%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  border-radius: 35rpx;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s;
+  border: none;
+}
+.content .ai-workshop .preview-btn.data-v-76a33e65 {
+  background-color: #f1f1f1;
+  color: #333;
+}
+.content .ai-workshop .preview-btn-hover.data-v-76a33e65 {
+  background-color: #e5e5e5;
+}
+.content .ai-workshop .save-btn.data-v-76a33e65 {
+  background-color: #07c160;
+  color: #fff;
+}
+.content .ai-workshop .save-btn-hover.data-v-76a33e65 {
+  background-color: #05a04e;
+}
+.content .ai-workshop .empty-box.data-v-76a33e65 {
+  background-color: #fff;
+  padding: 60rpx 30rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+.content .ai-workshop .empty-img.data-v-76a33e65 {
+  width: 100%;
+  height: 200%;
+  margin-bottom: 30rpx;
+  opacity: 0.7;
+}
+.content .ai-workshop .empty-text.data-v-76a33e65 {
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.6;
+}
+.content .ai-workshop .loading-mask.data-v-76a33e65 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.content .ai-workshop .loading-box.data-v-76a33e65 {
+  background-color: #fff;
+  padding: 50rpx 40rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+  width: 80%;
+  max-width: 400rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+.content .ai-workshop .loading-mazu-icon.data-v-76a33e65 {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+  animation: float-76a33e65 2s ease-in-out infinite;
+}
+@keyframes float-76a33e65 {
+0%,
+  100% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-10rpx);
+}
+}
+.content .ai-workshop .loading-animation.data-v-76a33e65 {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  margin: 10rpx 0;
+}
+.content .ai-workshop .loading-circle.data-v-76a33e65 {
+  width: 100%;
+  height: 100%;
+  border: 8rpx solid #f0f0f0;
+  border-top: 8rpx solid #8b2323;
+  border-radius: 50%;
+  animation: spin-76a33e65 1.2s linear infinite;
+}
+@keyframes spin-76a33e65 {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.content .ai-workshop .loading-title.data-v-76a33e65 {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+}
+.content .ai-workshop .mask-countdown.data-v-76a33e65 {
+  font-size: 26rpx;
+  color: #666;
+  background-color: #f9f5f0;
+  padding: 5rpx 20rpx;
+  border-radius: 20rpx;
+}
+.content .ai-workshop .loading-tip.data-v-76a33e65 {
+  font-size: 24rpx;
+  color: #888;
+  margin-top: 5rpx;
+}
+.content .ai-workshop .sample-box.data-v-76a33e65 {
+  margin-top: 40rpx;
+  padding: 30rpx 0 60rpx;
+}
+.content .ai-workshop .sample-title.data-v-76a33e65 {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+  display: block;
+}
+.content .ai-workshop .scroll-container.data-v-76a33e65 {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+}
+.content .ai-workshop .sample-list.data-v-76a33e65 {
+  display: flex;
+  gap: 20rpx;
+  position: relative;
+}
+.content .ai-workshop .sample-item.data-v-76a33e65 {
+  width: calc(33.33% - 14rpx);
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 280rpx;
+}
+.content .ai-workshop .sample-img.data-v-76a33e65 {
+  width: 100%;
+  height: 200rpx;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.content .ai-workshop .sample-desc-container.data-v-76a33e65 {
+  padding: 15rpx 10rpx;
+  background-color: #fff;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .ai-workshop .sample-desc.data-v-76a33e65 {
+  font-size: 24rpx;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 100%;
+}

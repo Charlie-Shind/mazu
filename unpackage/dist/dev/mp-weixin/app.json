@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/prays/prays",
+    "pages/shop/shop",
+    "pages/community/community",
+    "pages/mine/mine",
+    "pages/login/login"
+  ],
+  "subPackages": [
+    {
+      "root": "secondPages",
+      "pages": [
+        "news/news",
+        "fuCulture/fuCulture",
+        "faith/faith",
+        "mazuCulture/mazuCulture",
+        "palaceTemple/palaceTemple",
+        "publication/publication",
+        "cultureCreativity/cultureCreativity",
+        "tourism/tourism",
+        "accountSet/accountSet",
+        "gridDetail/gridDetail",
+        "communityDetail/communityDetail",
+        "topicDetail/topicDetail",
+        "search/search",
+        "communityAdd/communityAdd",
+        "shopDetail/shopDetail",
+        "commitOrder/commitOrder",
+        "setAddress/setAddress",
+        "addAddress/addAddress",
+        "orderPage/orderPage",
+        "myOrder/myOrder",
+        "tourHistory/tourHistory",
+        "agreement/agreement",
+        "contact/contact",
+        "praysDetail/praysDetail",
+        "incense/incense",
+        "orderDetail/orderDetail",
+        "myPost/myPost",
+        "webview/webview",
+        "webview/webview-2",
+        "ARView/ARView",
+        "myCertificate/myCertificate",
+        "ai-chat/ai-chat",
+        "ai-image/ai-image",
+        "generateimg/generateimg"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "妈祖非遗",
+    "navigationBarBackgroundColor": "#fffbf2",
+    "backgroundColor": "#fffbf2",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/prays/prays",
+        "text": "祈福"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "plugins": {
+    "coar": {
+      "version": "8.1.1",
+      "provider": "wx5024d89e4b208ce6"
+    }
+  },
+  "usingComponents": {}
+}

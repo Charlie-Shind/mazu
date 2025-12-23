@@ -1,0 +1,11 @@
+.content.data-v-c220f693 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 40rpx 0;
+}

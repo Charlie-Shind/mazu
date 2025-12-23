@@ -1,0 +1,221 @@
+.replyView.data-v-20d74254 {
+  width: 100%;
+  position: fixed;
+  background-color: #fffbf1;
+  border-top: 2rpx solid rgba(0, 0, 0, 0.08);
+  bottom: 0%;
+  left: 0%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: '阿里妈妈方圆体 VF Regular' !important;
+}
+.replyView .center.data-v-20d74254 {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.replyView .center input.data-v-20d74254 {
+  width: 75%;
+  padding: 15rpx 30rpx;
+  border: 2rpx solid rgba(0, 0, 0, 0.1);
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  outline: none;
+}
+.replyView .center .button.data-v-20d74254 {
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #4d0000;
+  padding: 12rpx 30rpx;
+  background-color: #ffebeb;
+  border-radius: 30rpx;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+.content.data-v-20d74254 {
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: calc(100vh - 200rpx - 120rpx);
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 40rpx 0;
+  font-family: '阿里妈妈方圆体 VF Regular' !important;
+  padding-bottom: 160rpx;
+}
+.content .noData.data-v-20d74254 {
+  padding: 60rpx 0;
+  text-align: center;
+}
+.content .noData image.data-v-20d74254 {
+  margin-bottom: 20rpx;
+}
+.content .noData view.data-v-20d74254 {
+  font-size: 28rpx;
+  color: #999;
+}
+.content .info.data-v-20d74254 {
+  padding: 0 40rpx;
+}
+.content .info .title.data-v-20d74254 {
+  font-size: 46rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+  line-height: 60rpx;
+}
+.content .info .time.data-v-20d74254 {
+  padding: 20rpx 0;
+  color: #bababa;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content .info .time view.data-v-20d74254 {
+  margin-right: 40rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.content .info .time view image.data-v-20d74254 {
+  margin-right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+}
+.content .info .time view text.data-v-20d74254 {
+  font-size: 26rpx;
+}
+.content .info .infoContent.data-v-20d74254 {
+  text-indent: 2em;
+  color: #333 !important;
+  line-height: 46rpx;
+  letter-spacing: 4rpx;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+}
+.content .info .container.data-v-20d74254 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10rpx 0 40rpx 0;
+}
+.content .info .list.data-v-20d74254 {
+  width: 32%;
+  aspect-ratio: 1;
+  margin-bottom: 15rpx;
+}
+.content .info .list image.data-v-20d74254 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  object-fit: cover;
+}
+.content .info .list.data-v-20d74254:not(:nth-child(3n)) {
+  margin-right: calc(4% / 2);
+}
+.content .info .list2.data-v-20d74254 {
+  width: 100%;
+  aspect-ratio: 1.77777778;
+}
+.content .info .list2 image.data-v-20d74254 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  object-fit: cover;
+}
+.content .comment.data-v-20d74254 {
+  width: 90%;
+  margin: auto;
+  margin-top: 20rpx;
+}
+.content .comment .title.data-v-20d74254 {
+  font-weight: bold;
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+.content .comment .commentList.data-v-20d74254 {
+  padding-top: 20rpx;
+}
+.content .comment .commentList .item.data-v-20d74254 {
+  padding: 25rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+  /* 二级及以上评论容器 */
+}
+.content .comment .commentList .item .commentContent.data-v-20d74254 {
+  display: flex;
+  align-items: flex-start;
+}
+.content .comment .commentList .item .commentContent image.data-v-20d74254 {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+  margin-top: 5rpx;
+}
+.content .comment .commentList .item .commentContent .itemInfo.data-v-20d74254 {
+  flex: 1;
+}
+.content .comment .commentList .item .commentContent .name.data-v-20d74254 {
+  color: #6b6b6b;
+  font-size: 28rpx;
+  display: block;
+  margin-bottom: 8rpx;
+}
+.content .comment .commentList .item .commentContent .replyContent.data-v-20d74254 {
+  font-size: 34rpx;
+  line-height: 44rpx;
+  word-break: break-all;
+  color: #333;
+  padding: 10rpx 0;
+}
+.content .comment .commentList .item .time.data-v-20d74254 {
+  font-size: 22rpx;
+  color: #b1b1b1;
+  padding-left: 100rpx;
+  padding-top: 5rpx;
+}
+.content .comment .commentList .item .replies.data-v-20d74254 {
+  padding-left: 60rpx;
+  margin-top: 15rpx;
+}
+.content .comment .commentList .item .replies .repliesItem.data-v-20d74254 {
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #f9f9f9;
+}
+.content .comment .commentList .item .replies .repliesItem .header.data-v-20d74254 {
+  display: flex;
+  align-items: center;
+}
+.content .comment .commentList .item .replies .repliesItem .header image.data-v-20d74254 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  margin-right: 15rpx;
+}
+.content .comment .commentList .item .replies .repliesItem .header .name.data-v-20d74254 {
+  color: #6b6b6b;
+  font-size: 26rpx;
+}
+.content .comment .commentList .item .replies .repliesItem .repliesContent.data-v-20d74254 {
+  margin-top: 8rpx;
+  padding-left: 75rpx;
+  font-size: 32rpx;
+  line-height: 42rpx;
+  word-break: break-all;
+  color: #333;
+}
+.content .comment .commentList .item .replies .repliesItem .time.data-v-20d74254 {
+  font-size: 20rpx;
+  color: #b1b1b1;
+  padding-left: 75rpx;
+  padding-top: 8rpx;
+}

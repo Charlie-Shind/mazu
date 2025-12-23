@@ -1,0 +1,1 @@
+<view class="content"><image class="imageBack" src="http://t73sifiwt.hn-bkt.clouddn.com/index/1040g2sg3170fnkhck4dg5p68qdqap5st2d183v0%21nd_dft_wlteh_webp_3.webp" mode="aspectFill"></image><view class="logo"><image src="{{a}}" mode=""></image><view class="text"> 福泽海韵 </view></view><view class="loginBtn" bindtap="{{b}}"> 微信登录 </view></view>

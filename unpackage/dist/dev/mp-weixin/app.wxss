@@ -1,0 +1,49 @@
+
+	/*每个页面公共css */
+	/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+	font-family: "阿里妈妈数黑体 Bold";
+	font-weight: 700;
+	src: url("http://t73sifiwt.hn-bkt.clouddn.com/font/AlimamaShuHeiTi-Bold.woff2") format("woff2"),
+		url("http://t73sifiwt.hn-bkt.clouddn.com/font/AlimamaShuHeiTi-Bold.woff") format("woff");
+	font-display: swap;
+}
+	/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+	font-family: "阿里妈妈刀隶体 Regular";
+	font-weight: 400;
+	src: url("//at.alicdn.com/wf/webfont/MVU79pMnbrb3/4GsIFIH7Enmn.woff2") format("woff2"),
+		url("//at.alicdn.com/wf/webfont/MVU79pMnbrb3/ZrR3JvSiuG66.woff") format("woff");
+	font-display: swap;
+}
+	/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+	font-family: "阿里妈妈方圆体 VF Regular";
+	src: url("http://t73sifiwt.hn-bkt.clouddn.com/font/AlimamaFangYuanTiVF-Thin.woff2") format("woff2"),
+		url("http://t73sifiwt.hn-bkt.clouddn.com/font/AlimamaFangYuanTiVF-Thin.woff") format("woff");
+	font-display: swap;
+}
+	/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+	font-family: "阿里妈妈方圆体2";
+	src: url("//at.alicdn.com/wf/webfont/MVU79pMnbrb3/17IfHnTAMYum.woff2") format("woff2"),
+		url("//at.alicdn.com/wf/webfont/MVU79pMnbrb3/Ky1lP0E4HFeG.woff") format("woff");
+	font-display: swap;
+}
+	/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+	font-family: "妈祖祖庙";
+	font-weight: 400;
+	src: url("http://t73sifiwt.hn-bkt.clouddn.com/font/AlimamaDaoLiTi.woff2") format("woff2"),
+		url("http://t73sifiwt.hn-bkt.clouddn.com/font/AlimamaDaoLiTi.woff") format("woff");
+	font-display: swap;
+}
+html,
+	page {
+		background-color: rgb(255, 251, 242);
+		color: #333;
+}
+.page {
+		padding-bottom: 200rpx;
+}
+page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

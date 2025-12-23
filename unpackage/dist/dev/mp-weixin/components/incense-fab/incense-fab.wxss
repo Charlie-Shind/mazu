@@ -1,0 +1,26 @@
+.incense-fab.data-v-570a7450 {
+  position: fixed;
+  right: 30rpx;
+  bottom: 180rpx;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: '阿里妈妈方圆体 VF Regular', sans-serif;
+}
+.incense-fab image.data-v-570a7450 {
+  width: 200rpx;
+}
+.fab-icon.data-v-570a7450 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 6rpx;
+}
+.fab-text.data-v-570a7450 {
+  color: #C92126;
+  font-weight: bold;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+}

@@ -1,0 +1,87 @@
+.content.data-v-e5e4e616 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+}
+.content .shop.data-v-e5e4e616 {
+  width: 95%;
+  margin: auto;
+  font-family: '阿里妈妈方圆体 VF Regular';
+}
+.content .shop .pubuItem.data-v-e5e4e616 {
+  column-count: 2;
+  column-gap: 20rpx;
+}
+.content .shop .item-masonry.data-v-e5e4e616 {
+  border-radius: 15rpx;
+  overflow: hidden;
+  background-color: #fff;
+  break-inside: avoid;
+  /*避免在元素内部插入分页符*/
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  box-shadow: 0px 0px 28rpx 1rpx rgba(78, 101, 153, 0.07);
+}
+.content .shop .item-masonry image.data-v-e5e4e616 {
+  width: 100%;
+}
+.content .shop .listtitle.data-v-e5e4e616 {
+  padding: 22rpx;
+  padding-top: 10rpx;
+  font-size: 28rpx;
+}
+.content .shop .listtitle .listtitle1.data-v-e5e4e616 {
+  line-height: 39rpx;
+}
+.content .shop .listtitle .listtitle3.data-v-e5e4e616 {
+  font-size: 40rpx;
+  line-height: 32rpx;
+  color: #aa0000;
+  padding-top: 22rpx;
+}
+.content .shop .listtitle .listtitle3 text.data-v-e5e4e616 {
+  font-size: 32rpx;
+}
+.shopName.data-v-e5e4e616 {
+  font-family: '阿里妈妈方圆体 VF Regular';
+  padding: 40rpx 20rpx;
+  color: #4d0000;
+}
+.shopName .shopTitle.data-v-e5e4e616 {
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.shopName .shopEngTitle.data-v-e5e4e616 {
+  margin-top: 5rpx;
+  font-size: 26rpx;
+}
+.input.data-v-e5e4e616 {
+  font-family: '阿里妈妈方圆体 VF Regular';
+  width: 95%;
+  height: 80rpx;
+  background-color: #fffbf2;
+  margin: auto;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.input input.data-v-e5e4e616 {
+  padding-left: 100rpx;
+  width: 80%;
+  color: #4d0000;
+}
+.input image.data-v-e5e4e616 {
+  position: absolute;
+  width: 52rpx;
+  height: 52rpx;
+  left: 4%;
+}

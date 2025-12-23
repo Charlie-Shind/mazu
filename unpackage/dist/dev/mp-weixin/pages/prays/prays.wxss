@@ -1,0 +1,115 @@
+.container {
+  position: relative;
+  height: calc(100vh - 250rpx);
+  width: 100%;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.container .backImage {
+  width: 100%;
+  height: calc(100vh - 120rpx);
+  float: left;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+.container .zhangYiNa {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .qian {
+  height: 700rpx;
+  width: 570rpx;
+  z-index: 99;
+}
+.qian.shake {
+  animation: shake 0.5s infinite;
+}
+.share {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 5%;
+  z-index: 99;
+  font-size: 52rpx;
+  font-family: '阿里妈妈数黑体 Bold' !important;
+  font-weight: bold;
+}
+@keyframes shake {
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(-10deg);
+}
+50% {
+    transform: rotate(10deg);
+}
+75% {
+    transform: rotate(-10deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}
+.first-visit-popup {
+  width: 600rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 40rpx rgba(0, 0, 0, 0.15);
+}
+.first-visit-popup .popup-header {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4a574 0%, #c8965e 100%);
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.2);
+}
+.first-visit-popup .popup-header .popup-title {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.first-visit-popup .popup-content {
+  padding: 40rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200rpx;
+}
+.first-visit-popup .popup-content .popup-text {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.first-visit-popup .popup-content .popup-text:last-child {
+  margin-bottom: 0;
+  color: #d4a574;
+  font-weight: 500;
+}
+.first-visit-popup .popup-footer {
+  border-top: 1rpx solid #eee;
+}
+.first-visit-popup .popup-footer .popup-btn {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #d4a574 0%, #c8965e 100%);
+  transition: all 0.2s;
+}
+.first-visit-popup .popup-footer .popup-btn:active {
+  opacity: 0.8;
+}

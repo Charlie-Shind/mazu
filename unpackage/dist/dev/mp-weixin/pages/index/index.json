@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tab-bar": "../../components/tabbar/tabbar",
+    "page-back": "../../components/title/title",
+    "mask-page": "../../components/mask/mask",
+    "incense-fab": "../../components/incense-fab/incense-fab"
+  }
+}

@@ -1,0 +1,56 @@
+.content.data-v-f9b31096 {
+  padding-bottom: 200rpx;
+  position: relative;
+  top: 200rpx;
+  width: 100%;
+  min-height: 300rpx;
+  background-color: #fffbf1;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding: 40rpx 0;
+  font-family: "阿里妈妈方圆体 VF Regular" !important;
+}
+.content .info.data-v-f9b31096 {
+  padding: 0 40rpx;
+}
+.content .info .title.data-v-f9b31096 {
+  font-size: 46rpx;
+  font-weight: bold;
+}
+.content .info .time.data-v-f9b31096 {
+  padding: 20rpx 0;
+  color: #bababa;
+}
+.content .info .infoContent.data-v-f9b31096 {
+  text-indent: 2em;
+  color: #000 !important;
+  line-height: 46rpx;
+  letter-spacing: 4rpx;
+}
+.content .info .container.data-v-f9b31096 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40rpx 0;
+}
+.content .info .list.data-v-f9b31096 {
+  width: 32%;
+  aspect-ratio: 1;
+}
+.content .info .list image.data-v-f9b31096 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.content .info .list.data-v-f9b31096:not(:nth-child(3n)) {
+  margin-right: calc(5% / 3);
+}
+.content .info .list2.data-v-f9b31096 {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.content .info .list2 image.data-v-f9b31096 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商城",
+  "usingComponents": {
+    "page-back": "../../components/title/title",
+    "tab-bar": "../../components/tabbar/tabbar",
+    "incense-fab": "../../components/incense-fab/incense-fab"
+  }
+}

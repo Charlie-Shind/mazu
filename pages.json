@@ -1,0 +1,298 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/prays/prays",
+			"style": {
+				"navigationBarTitleText": "祈福"
+			}
+		},
+		{
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "商城"
+			}
+		},
+		{
+			"path": "pages/community/community",
+			"style": {
+				"navigationBarTitleText": "社区"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+
+	],
+
+	"subPackages": [{
+		"root": "secondPages",
+		"pages": [{
+				"path": "news/news",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "fuCulture/fuCulture",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "faith/faith",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "mazuCulture/mazuCulture",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "palaceTemple/palaceTemple",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "publication/publication",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "cultureCreativity/cultureCreativity",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "tourism/tourism",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "accountSet/accountSet",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "gridDetail/gridDetail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "communityDetail/communityDetail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "topicDetail/topicDetail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "search/search",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "communityAdd/communityAdd",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "shopDetail/shopDetail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "commitOrder/commitOrder",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "setAddress/setAddress",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "addAddress/addAddress",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "orderPage/orderPage",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "myOrder/myOrder",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "tourHistory/tourHistory",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "agreement/agreement",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "contact/contact",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "praysDetail/praysDetail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "incense/incense",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "orderDetail/orderDetail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "myPost/myPost",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "webview/webview",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "webview/webview-2",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "ARView/ARView",
+				"style": {
+					"usingComponents": {
+						"coar-scene-component": "plugin://coar/coar-scene-component"
+					}
+				}
+			},
+			{
+				"path": "myCertificate/myCertificate",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path": "ai-chat/ai-chat",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			},
+			{
+				"path" : "ai-image/ai-image",
+				"style" : 
+				{
+					"navigationBarTitleText" : ""
+				}
+			},
+			{
+				"path" : "generateimg/generateimg",
+				"style" : 
+				{
+					"navigationBarTitleText" : ""
+				}
+			}
+		]
+	}],
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/index/index",
+				// "selectedIconPath": "static/tabbarIcon/home_active.svg",
+				// "iconPath": "static/tabbarIcon/home.svg",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/prays/prays",
+				// "selectedIconPath": "static/tabbarIcon/prays_active.svg",
+				// "iconPath": "static/tabbarIcon/prays.svg",
+				"text": "祈福"
+			},
+			{
+				"pagePath": "pages/shop/shop",
+				// "selectedIconPath": "static/tabbarIcon/shop_active.svg",
+				// "iconPath": "static/tabbarIcon/shop.svg",
+				"text": "商城"
+			},
+			{
+				"pagePath": "pages/community/community",
+				// "selectedIconPath": "static/tabbarIcon/community_active.svg",
+				// "iconPath": "static/tabbarIcon/community.svg",
+				"text": "社区"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				// "selectedIconPath": "static/tabbarIcon/mine_active.svg",
+				// "iconPath": "static/tabbarIcon/mine.svg",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "妈祖非遗",
+		"navigationBarBackgroundColor": "#fffbf2",
+		"backgroundColor": "#fffbf2",
+		"app-plus": {
+			"titleNView": false // 取消原生tab导航栏 
+		},
+		"navigationStyle": "custom"
+	},
+	"uniIdRouter": {}
+}
