@@ -28,7 +28,7 @@
 							<view class="infoIntro">{{item?.grid}} - {{item?.shopInfo}}</view>
 						</view>
 						<view class="price">
-							￥<text>{{item?.payment}}</text>
+							￥<text>{{item?.price}}</text>
 						</view>
 					</view>
 					<view class="itemBottom">

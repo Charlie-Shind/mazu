@@ -2,18 +2,18 @@
 	<!-- 广告遮罩 -->
 	<maskPage @mask-closed="onMaskClosed" v-if="!isMaskLoaded"></maskPage>
 	<!-- AR -->
-	<img
+	<!-- <img
 		@click="to('/secondPages/ARView/ARView')"
 		style="position: absolute; z-index: 999; height: 60rpx; width: 60rpx; top: 6%; left: 5%"
 		src="https://java-ai-ch.oss-cn-beijing.aliyuncs.com/images/AR%E6%89%AB%E4%B8%80%E6%89%AB.svg"
 		alt=""
-	/>
+	/> -->
 	<img @click="to('/secondPages/ARView/ARView')" style="position: absolute; z-index: 999; height: 60rpx; width: 60rpx; top: 6%; left: 5%" src="/static/AR.png" alt="" />
 	<!-- ai -->
 	<img
 		@click="to('/secondPages/ai-chat/ai-chat')"
-		style="position: absolute; z-index: 999; height: 60rpx; width: 60rpx; top: 10%; left: 5%"
-		src="https://java-ai-ch.oss-cn-beijing.aliyuncs.com/images/2d483a5b2637d08cc0067a1ed487b4af.png"
+		style="position: absolute; z-index: 999; height: 60rpx; width: 60rpx; top: 6%; left: 15%"
+		src="https://javaweb-ai-ch.oss-cn-beijing.aliyuncs.com/2025/12/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251224142708_799_2552.png"
 		alt=""
 	/>
 
@@ -332,7 +332,7 @@ export default {
 
 			image {
 				width: 100%;
-				height: 650rpx;
+				height: 530rpx;
 				object-fit: cover;
 			}
 

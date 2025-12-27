@@ -689,7 +689,7 @@
 		background: linear-gradient(135deg, #fffef8 0%, #fffbf2 50%, #fffef8 100%);
 		border: 6rpx solid #d4a574;
 		border-radius: 32rpx;
-		padding: 80rpx 50rpx 60rpx;
+		padding: 20rpx;
 		margin-bottom: 50rpx;
 		box-shadow: 
 			0 20rpx 60rpx rgba(212, 165, 116, 0.25),
@@ -900,7 +900,7 @@
 			// 印章
 			.certificate-seal {
 				position: absolute;
-				bottom: 20rpx;
+				bottom: 70rpx;
 				right: 30rpx;
 				z-index: 2;
 

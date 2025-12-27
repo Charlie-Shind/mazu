@@ -47,8 +47,9 @@ const _sfc_main = {
     });
   },
   methods: {
-    chooseImage() {
-      if (this.imageList.length > 9) {
+    // 选择图片后，等待上传完成
+    async chooseImage() {
+      if (this.imageList.length >= 9) {
         common_vendor.index.showToast({
           title: "最多只能上传9张图片",
           icon: "none"
@@ -57,19 +58,17 @@ const _sfc_main = {
       }
       common_vendor.index.chooseImage({
         count: 9 - this.imageList.length,
-        // 最多可以选择的图片张数
         sizeType: ["original", "compressed"],
-        // 可以指定是原图还是压缩图,默认二者都有
         sourceType: ["album", "camera"],
-        // 可以指定来源是相册还是相机,默认二者都有
-        success: (res) => {
+        success: async (res) => {
           this.imageList = this.imageList.concat(res.tempFilePaths);
-          this.uploadImages();
+          await this.uploadImages();
         }
       });
     },
-    uploadImages() {
-      this.imageList.forEach((item, index) => {
+    // 优化：封装图片上传为Promise
+    uploadSingleImage(item) {
+      return new Promise((resolve, reject) => {
         const url = `${utils_request.base_url}/community/uploadCommunityImage`;
         const token = common_vendor.index.getStorageSync("token");
         common_vendor.index.uploadFile({
@@ -81,13 +80,33 @@ const _sfc_main = {
             Authorization: token
           },
           success: (uploadRes) => {
-            this.uploadImage.push(JSON.parse(uploadRes.data).imageUrl);
+            const resData = JSON.parse(uploadRes.data);
+            resolve(resData.imageUrl);
           },
           fail: (err) => {
-            common_vendor.index.__f__("log", "at secondPages/communityAdd/communityAdd.vue:120", `Image upload failed`, err);
+            common_vendor.index.__f__("log", "at secondPages/communityAdd/communityAdd.vue:124", `Image upload failed`, err);
+            reject(err);
           }
         });
       });
+    },
+    // 批量上传图片，等待所有上传完成
+    async uploadImages() {
+      this.uploadImage = [];
+      const uploadPromises = this.imageList.map((item) => this.uploadSingleImage(item));
+      try {
+        const imageUrls = await Promise.all(uploadPromises);
+        this.uploadImage = imageUrls;
+        common_vendor.index.showToast({
+          title: `图片上传完成（${imageUrls.length}张）`,
+          icon: "none"
+        });
+      } catch (err) {
+        common_vendor.index.showToast({
+          title: "部分图片上传失败",
+          icon: "none"
+        });
+      }
     },
     changePickerUnit(e, unitList) {
       let index = e.detail.value;
@@ -106,7 +125,6 @@ const _sfc_main = {
         });
         return;
       }
-      common_vendor.index.__f__("log", "at secondPages/communityAdd/communityAdd.vue:143", store_userInfo.useUserInfoStore().$state.userInfo.id);
       if (!store_userInfo.useUserInfoStore().$state.userInfo.id) {
         common_vendor.index.showToast({
           title: "您未请登录，请登录后再发布...",
@@ -116,10 +134,11 @@ const _sfc_main = {
           common_vendor.index.navigateTo({
             url: "/pages/login/login"
           });
-        }, 3e3);
+        }, 1e3);
         return;
       }
       `["${Object.values(this.uploadImage).join('","')}"]`;
+      common_vendor.index.__f__("log", "at secondPages/communityAdd/communityAdd.vue:183", "user_id", store_userInfo.useUserInfoStore().$state.userInfo.id);
       apis_community.uploadCommunityAPI({
         title: this.title,
         content: this.txt,

@@ -83,8 +83,10 @@ export default {
 		});
 	},
 	methods: {
-		chooseImage() {
-			if (this.imageList.length > 9) {
+		// 选择图片后，等待上传完成
+		async chooseImage() {
+			if (this.imageList.length >= 9) {
+				// 修复：>=9时禁止选择
 				uni.showToast({
 					title: '最多只能上传9张图片',
 					icon: 'none'
@@ -92,17 +94,18 @@ export default {
 				return;
 			}
 			uni.chooseImage({
-				count: 9 - this.imageList.length, // 最多可以选择的图片张数
-				sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图,默认二者都有
-				sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机,默认二者都有
-				success: (res) => {
+				count: 9 - this.imageList.length,
+				sizeType: ['original', 'compressed'],
+				sourceType: ['album', 'camera'],
+				success: async (res) => {
 					this.imageList = this.imageList.concat(res.tempFilePaths);
-					this.uploadImages();
+					await this.uploadImages(); // 等待图片上传完成
 				}
 			});
 		},
-		uploadImages() {
-			this.imageList.forEach((item, index) => {
+		// 优化：封装图片上传为Promise
+		uploadSingleImage(item) {
+			return new Promise((resolve, reject) => {
 				const url = `${base_url}/community/uploadCommunityImage`;
 				const token = uni.getStorageSync('token');
 				uni.uploadFile({
@@ -114,13 +117,34 @@ export default {
 						Authorization: token
 					},
 					success: (uploadRes) => {
-						this.uploadImage.push(JSON.parse(uploadRes.data).imageUrl);
+						const resData = JSON.parse(uploadRes.data);
+						resolve(resData.imageUrl);
 					},
 					fail: (err) => {
 						console.log(`Image upload failed`, err);
+						reject(err);
 					}
 				});
 			});
+		},
+		// 批量上传图片，等待所有上传完成
+		async uploadImages() {
+			this.uploadImage = []; // 清空原有上传结果
+			const uploadPromises = this.imageList.map((item) => this.uploadSingleImage(item));
+			try {
+				// 等待所有图片上传完成，返回所有图片地址
+				const imageUrls = await Promise.all(uploadPromises);
+				this.uploadImage = imageUrls;
+				uni.showToast({
+					title: `图片上传完成（${imageUrls.length}张）`,
+					icon: 'none'
+				});
+			} catch (err) {
+				uni.showToast({
+					title: '部分图片上传失败',
+					icon: 'none'
+				});
+			}
 		},
 		changePickerUnit(e, unitList) {
 			let index = e.detail.value;
@@ -139,8 +163,6 @@ export default {
 				});
 				return;
 			}
-			
-			console.log(useUserInfoStore().$state.userInfo.id)
 
 			if (!useUserInfoStore().$state.userInfo.id) {
 				uni.showToast({
@@ -152,12 +174,13 @@ export default {
 					uni.navigateTo({
 						url: '/pages/login/login'
 					});
-				}, 3000);
+				}, 1000);
 				return;
 			}
 
 			// 转换我想要的格式
 			const imageUrlList = `["${Object.values(this.uploadImage).join('","')}"]`;
+			console.log("user_id", useUserInfoStore().$state.userInfo.id)
 			uploadCommunityAPI({
 				title: this.title,
 				content: this.txt,

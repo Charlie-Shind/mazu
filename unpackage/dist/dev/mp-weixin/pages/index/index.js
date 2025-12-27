@@ -178,23 +178,22 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.o($options.onMaskClosed)
   } : {}, {
     c: common_vendor.o(($event) => $options.to("/secondPages/ARView/ARView")),
-    d: common_vendor.o(($event) => $options.to("/secondPages/ARView/ARView")),
-    e: common_assets._imports_0,
-    f: common_vendor.o(($event) => $options.to("/secondPages/ai-chat/ai-chat")),
-    g: $data.isMaskLoaded
+    d: common_assets._imports_0,
+    e: common_vendor.o(($event) => $options.to("/secondPages/ai-chat/ai-chat")),
+    f: $data.isMaskLoaded
   }, $data.isMaskLoaded ? {
-    h: common_vendor.p({
+    g: common_vendor.p({
       titleInfo: $data.titleInfo
     }),
-    i: common_vendor.f($data.swiperData, (item, k0, i0) => {
+    h: common_vendor.f($data.swiperData, (item, k0, i0) => {
       return {
         a: item.imageUrl,
         b: item.id
       };
     }),
-    j: common_vendor.o(($event) => $options.to("/secondPages/webview/webview-2")),
-    k: common_vendor.o(($event) => $options.to("/secondPages/webview/webview")),
-    l: common_vendor.f($data.gridData, (item, k0, i0) => {
+    i: common_vendor.o(($event) => $options.to("/secondPages/webview/webview-2")),
+    j: common_vendor.o(($event) => $options.to("/secondPages/webview/webview")),
+    k: common_vendor.f($data.gridData, (item, k0, i0) => {
       return {
         a: item.imageUrl,
         b: common_vendor.t(item.text),
@@ -202,17 +201,17 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: item.id
       };
     }),
-    m: common_vendor.o(($event) => $options.to("/secondPages/news/news")),
-    n: common_vendor.f($data.news.slice(7, 15), (item, index, i0) => {
+    l: common_vendor.o(($event) => $options.to("/secondPages/news/news")),
+    m: common_vendor.f($data.news.slice(7, 15), (item, index, i0) => {
       return {
         a: item.imageUrl,
         b: common_vendor.t(item.title),
         c: common_vendor.o(($event) => $options.toPage(item, "新闻中心"))
       };
     }),
-    o: common_vendor.o((...args) => _ctx.scroll && _ctx.scroll(...args)),
-    p: common_vendor.o(($event) => $options.to("/secondPages/cultureCreativity/cultureCreativity")),
-    q: common_vendor.f($data.creativity, (item, index, i0) => {
+    n: common_vendor.o((...args) => _ctx.scroll && _ctx.scroll(...args)),
+    o: common_vendor.o(($event) => $options.to("/secondPages/cultureCreativity/cultureCreativity")),
+    p: common_vendor.f($data.creativity, (item, index, i0) => {
       return {
         a: item.imageUrl,
         b: common_vendor.t(item.title),
@@ -220,8 +219,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: common_vendor.o(($event) => $options.toPage(item, "妈祖文创"))
       };
     }),
-    r: common_vendor.o((...args) => _ctx.scroll && _ctx.scroll(...args)),
-    s: common_vendor.f($data.list, (item, index, i0) => {
+    q: common_vendor.o((...args) => _ctx.scroll && _ctx.scroll(...args)),
+    r: common_vendor.f($data.list, (item, index, i0) => {
       return {
         a: item.imageUrl[0],
         b: common_vendor.t(item.title),

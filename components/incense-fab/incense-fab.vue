@@ -2,8 +2,8 @@
 	<view class="incense-fab" @click="goIncense">
 		<!-- <image class="fab-icon" src="/static/add.svg" mode="aspectFit"></image>
 		<view class="fab-text">上香</view> -->
-		<image src="http://t73sifiwt.hn-bkt.clouddn.com/index/c1c063e459d748ba8f7527f84615cd5c.gif" mode="widthFix"></image>
-		<view class="fab-text">供奉上香</view> 
+		<image src="https://javaweb-ai-ch.oss-cn-beijing.aliyuncs.com/2025/12/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251223153411_774_2552.png" mode="widthFix"></image>
+		<view class="fab-text">公益践行</view> 
 	</view>
 </template>
 

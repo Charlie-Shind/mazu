@@ -219,7 +219,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: common_vendor.t(item == null ? void 0 : item.shopname),
         e: common_vendor.t(item == null ? void 0 : item.grid),
         f: common_vendor.t(item == null ? void 0 : item.shopInfo),
-        g: common_vendor.t(item == null ? void 0 : item.payment),
+        g: common_vendor.t(item == null ? void 0 : item.price),
         h: item.order_status === 0
       }, item.order_status === 0 ? {
         i: common_vendor.o(($event) => $options.handClick(item, "delete"))

@@ -86,7 +86,7 @@
 					{
 						id: 2,
 						name: "我的证书",
-						svg: "/static/mine/order.svg",
+						svg: "/static/mine/certificate.svg",
 						url: "/secondPages/myCertificate/myCertificate"
 					},
 					// {
@@ -101,12 +101,12 @@
 						svg: "/static/mine/history.svg",
 						url: "/secondPages/tourHistory/tourHistory"
 					},
-					{
-						id: 4,
-						name: "联系开发者",
-						svg: "/static/mine/kaifa.svg",
-						url: "/secondPages/contact/contact"
-					},
+					// {
+					// 	id: 4,
+					// 	name: "联系开发者",
+					// 	svg: "/static/mine/kaifa.svg",
+					// 	url: "/secondPages/contact/contact"
+					// },
 					{
 						id: 5,
 						name: "账户设置",

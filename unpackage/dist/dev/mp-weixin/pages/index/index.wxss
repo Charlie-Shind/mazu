@@ -12,7 +12,7 @@
 }
 .carousel .carouselSwiper .swiper-item image.data-v-1cf27b2a {
   width: 100%;
-  height: 650rpx;
+  height: 530rpx;
   object-fit: cover;
 }
 .carousel .carouselSwiper .swiper-item .gradient-overlay.data-v-1cf27b2a {

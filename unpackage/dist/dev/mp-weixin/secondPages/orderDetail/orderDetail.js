@@ -49,7 +49,7 @@ if (!Array) {
   _component_pageBack();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
+  return common_vendor.e({
     a: common_vendor.p({
       titleInfo: $data.titleInfo
     }),
@@ -70,13 +70,18 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     f: common_vendor.t($data.orderData[0].payment_type = "商城支付"),
     g: common_vendor.t($options.formatDate($data.orderData[0].pay_time)),
     h: common_vendor.t($options.formatDate($data.orderData[0].create_time)),
-    i: common_vendor.t($data.orderData[0].name),
-    j: common_vendor.t($data.orderData[0].mobile),
-    k: common_vendor.t($data.orderData[0].province_id),
-    l: common_vendor.t($data.orderData[0].city_id),
-    m: common_vendor.t($data.orderData[0].district_id),
-    n: common_vendor.t($data.orderData[0].remark)
-  };
+    i: $data.orderData[0].grid != "公益"
+  }, $data.orderData[0].grid != "公益" ? {
+    j: common_vendor.t($data.orderData[0].name),
+    k: common_vendor.t($data.orderData[0].mobile)
+  } : {}, {
+    l: $data.orderData[0].grid != "公益"
+  }, $data.orderData[0].grid != "公益" ? {
+    m: common_vendor.t($data.orderData[0].province_id),
+    n: common_vendor.t($data.orderData[0].city_id),
+    o: common_vendor.t($data.orderData[0].district_id),
+    p: common_vendor.t($data.orderData[0].remark)
+  } : {});
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-c9d50fba"]]);
 wx.createPage(MiniProgramPage);

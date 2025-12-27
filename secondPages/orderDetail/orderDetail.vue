@@ -74,7 +74,7 @@
 						{{formatDate(orderData[0].create_time)}}
 					</view>
 				</view>
-				<view class="infoItem">
+				<view class="infoItem" v-if="orderData[0].grid != '公益'">
 					<view class="title">
 						收货信息
 					</view>
@@ -82,7 +82,7 @@
 						{{orderData[0].name}}-{{orderData[0].mobile}}
 					</view>
 				</view>
-				<view class="infoItem">
+				<view class="infoItem" v-if="orderData[0].grid != '公益'">
 					<view class="title">
 						收货地址
 					</view>

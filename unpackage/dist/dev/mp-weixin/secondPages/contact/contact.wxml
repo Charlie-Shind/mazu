@@ -1,1 +1,1 @@
-<page-back wx:if="{{a}}" u-i="74591be8-0" bind:__l="__l" u-p="{{a}}"></page-back><view class="content2"><view class="wxImage"><image show-menu-by-longpress="{{true}}" src="http://t73sifiwt.hn-bkt.clouddn.com/wx.jpg" bindtap="{{b}}" mode="aspectFit"></image></view></view>
+<page-back wx:if="{{a}}" u-i="7e308f5e-0" bind:__l="__l" u-p="{{a}}"></page-back><view class="content2"><view class="wxImage"><image show-menu-by-longpress="{{true}}" src="http://t73sifiwt.hn-bkt.clouddn.com/wx.jpg" bindtap="{{b}}" mode="aspectFit"></image></view></view>

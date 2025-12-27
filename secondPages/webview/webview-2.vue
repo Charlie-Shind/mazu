@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<web-view src="http://47.122.115.28:8787/"></web-view>
+		<web-view src="http://47.95.210.123:8899"></web-view>
 	</view>
 </template>
 

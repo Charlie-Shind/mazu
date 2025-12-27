@@ -137,7 +137,7 @@
   background: linear-gradient(135deg, #fffef8 0%, #fffbf2 50%, #fffef8 100%);
   border: 6rpx solid #d4a574;
   border-radius: 32rpx;
-  padding: 80rpx 50rpx 60rpx;
+  padding: 20rpx;
   margin-bottom: 50rpx;
   box-shadow: 0 20rpx 60rpx rgba(212, 165, 116, 0.25), 0 0 0 2rpx rgba(255, 255, 255, 0.8) inset, 0 0 40rpx rgba(212, 165, 116, 0.1) inset;
   position: relative;
@@ -315,7 +315,7 @@
 }
 .certificate-card .certificate-body .certificate-seal.data-v-06acf921 {
   position: absolute;
-  bottom: 20rpx;
+  bottom: 70rpx;
   right: 30rpx;
   z-index: 2;
 }
