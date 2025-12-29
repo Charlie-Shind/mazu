@@ -120,7 +120,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     h: ((_g = $data.contentInfo[0]) == null ? void 0 : _g.grid) === "公益"
   }, ((_h = $data.contentInfo[0]) == null ? void 0 : _h.grid) === "公益" ? {} : {}, {
     i: common_vendor.t(((_i = $data.contentInfo[0]) == null ? void 0 : _i.grid) === "公益" ? "公益背景" : "产品详情"),
-    j: common_vendor.t(((_j = $data.contentInfo[0]) == null ? void 0 : _j.grid) === "公益" ? "暂无公益项目介绍..." : "暂无介绍..."),
+    j: common_vendor.t((_j = $data.contentInfo[0]) == null ? void 0 : _j.shopInfo),
     k: common_vendor.f($data.contentInfo[0].imageUrl, (item, k0, i0) => {
       return {
         a: item

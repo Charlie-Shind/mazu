@@ -28,24 +28,12 @@ const _sfc_main = {
           svg: "/static/mine/certificate.svg",
           url: "/secondPages/myCertificate/myCertificate"
         },
-        // {
-        // 	id: 2,
-        // 	name: "我的收藏",
-        // 	svg: "/static/mine/hezuo.svg",
-        // 	url: "/secondPages/agreement/agreement"
-        // },
         {
           id: 3,
           name: "游览历史",
           svg: "/static/mine/history.svg",
           url: "/secondPages/tourHistory/tourHistory"
         },
-        // {
-        // 	id: 4,
-        // 	name: "联系开发者",
-        // 	svg: "/static/mine/kaifa.svg",
-        // 	url: "/secondPages/contact/contact"
-        // },
         {
           id: 5,
           name: "账户设置",
@@ -167,6 +155,12 @@ const _sfc_main = {
       common_vendor.index.navigateTo({
         url
       });
+    },
+    // 新增跳转方法
+    toIncensePage() {
+      common_vendor.index.navigateTo({
+        url: "/secondPages/incense/incense"
+      });
     }
   },
   onPageScroll(e) {
@@ -199,12 +193,13 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     d: common_vendor.t($data.userInfo.nickname),
     e: common_vendor.t($data.signDays),
     f: common_vendor.t($data.userInfo.balance || 0),
-    g: common_vendor.o((...args) => $options.toSet && $options.toSet(...args)),
-    h: common_vendor.o(($event) => $options.signIn())
+    g: common_vendor.o((...args) => $options.toIncensePage && $options.toIncensePage(...args)),
+    h: common_vendor.o((...args) => $options.toSet && $options.toSet(...args)),
+    i: common_vendor.o(($event) => $options.signIn())
   } : {
-    i: common_vendor.o((...args) => $options.toLogin && $options.toLogin(...args))
+    j: common_vendor.o((...args) => $options.toLogin && $options.toLogin(...args))
   }, {
-    j: common_vendor.f($data.otherPage, (item, k0, i0) => {
+    k: common_vendor.f($data.otherPage, (item, k0, i0) => {
       return {
         a: item.svg,
         b: common_vendor.t(item.name),

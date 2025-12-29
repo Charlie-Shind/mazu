@@ -37,7 +37,6 @@ const _sfc_main = {
       isLoading: false,
       imageUrl: "",
       countdown: 1,
-      // 1. 倒计时初始值改为1（正数开始）
       countdownTimer: null,
       sampleList: [],
       scrollX: 0,
@@ -81,7 +80,6 @@ const _sfc_main = {
       this.imageUrl = "";
       common_vendor.index.showToast({ title: "已清除当前结果", icon: "none" });
     },
-    // 2. 倒计时改为正数递增（核心修改）
     initCountdown() {
       this.countdown = 1;
       if (this.countdownTimer)
@@ -119,7 +117,7 @@ const _sfc_main = {
           common_vendor.index.showToast({ title: (res == null ? void 0 : res.msg) || "生成失败", icon: "none" });
         }
       } catch (err) {
-        common_vendor.index.__f__("error", "at secondPages/generateimg/generateimg.vue:209", "生成失败：", err);
+        common_vendor.index.__f__("error", "at secondPages/generateimg/generateimg.vue:206", "生成失败：", err);
         common_vendor.index.showToast({ title: "网络错误", icon: "none" });
       } finally {
         this.isLoading = false;
@@ -196,7 +194,6 @@ const _sfc_main = {
       this.isScrolling = false;
       this.scrollTimer && (clearInterval(this.scrollTimer), this.scrollTimer = null);
     },
-    // 3. 极简获取轮播图数据（原样赋值，不过滤）
     async getMazuCarousel() {
       const res = await utils_request.request({ url: "/user/image/mazuCarousel", method: "get" });
       if (res && res.data && Array.isArray(res.data)) {

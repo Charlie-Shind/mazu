@@ -22,7 +22,6 @@
 				<!-- 用户消息（右侧：头像 + 气泡） -->
 				<view class="user-msg" v-if="msg.role === 'user'">
 					<view class="msg-wrap">
-						<!-- ✅ 核心修复：气泡外层套固定高度容器，避免flex对齐偏移 -->
 						<view class="bubble-wrapper">
 							<view class="user-bubble">{{ msg.content }}</view>
 						</view>

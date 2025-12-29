@@ -43,7 +43,7 @@
 		<view class="shopDetail">
 			<view class="detail">
 				<text class="detailTitle">{{ contentInfo[0]?.grid === '公益' ? '公益背景' : '产品详情' }}</text>
-				<view class="detailInfo">{{ contentInfo[0]?.grid === '公益' ? '暂无公益项目介绍...' : '暂无介绍...' }}</view>
+				<view class="detailInfo">{{ contentInfo[0]?.shopInfo }}</view>
 				<view v-for="item in contentInfo[0].imageUrl">
 					<image :src="item" mode="aspectFill"></image>
 				</view>

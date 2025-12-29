@@ -2,8 +2,8 @@
 	<view class="incense-fab" @click="goIncense">
 		<!-- <image class="fab-icon" src="/static/add.svg" mode="aspectFit"></image>
 		<view class="fab-text">上香</view> -->
-		<image src="https://javaweb-ai-ch.oss-cn-beijing.aliyuncs.com/2025/12/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20251223153411_774_2552.png" mode="widthFix"></image>
-		<view class="fab-text">公益践行</view> 
+		<image src="https://java-ai-ch.oss-cn-beijing.aliyuncs.com/supawork-7437bcb61c51449c83e72da1d67200b3.webp" mode="widthFix"></image>
+		<!-- <view class="fab-text">创意工坊</view> -->
 	</view>
 </template>
 
@@ -13,7 +13,7 @@
 		methods: {
 			goIncense() {
 				uni.navigateTo({
-					url: '/secondPages/incense/incense'
+					url: '/secondPages/generateimg/generateimg'
 				});
 			}
 		}

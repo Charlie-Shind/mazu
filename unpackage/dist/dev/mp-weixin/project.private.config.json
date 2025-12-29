@@ -9,11 +9,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "secondPages/ai-image/ai-image",
+          "name": "secondPages/generateimg/generateimg",
           "pathName": "secondPages/generateimg/generateimg",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "secondPages/ai-image/ai-image",
+          "pathName": "secondPages/generateimg/generateimg",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/ai-chat/ai-chat",

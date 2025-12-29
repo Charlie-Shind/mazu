@@ -33,9 +33,9 @@
   position: relative;
   top: 200rpx;
   width: 100%;
-  background-color: #FFFBF2;
+  background-color: #fffbf2;
   border-radius: 40rpx 40rpx 0 0;
-  font-family: "阿里妈妈方圆体 VF Regular";
+  font-family: '阿里妈妈方圆体 VF Regular';
 }
 .container .userInfo.data-v-7c2ebfa5 {
   padding: 40rpx 0;
@@ -53,7 +53,7 @@
   width: 260rpx;
   height: 80rpx;
   background-color: #4d0000;
-  color: #FFFBF2;
+  color: #fffbf2;
   font-size: 38rpx;
   display: flex;
   justify-content: center;
@@ -81,15 +81,25 @@
   padding-left: 20rpx;
 }
 .container .userInfo .userHeader .headerLeft .name view.data-v-7c2ebfa5:first-child {
-  font-size: 50rpx;
+  font-size: 40rpx;
 }
 .container .userInfo .userHeader .headerLeft .name view.data-v-7c2ebfa5:last-child {
   font-size: 24rpx;
 }
+.container .userInfo .userHeader .headerLeft .name .incenseBtn.data-v-7c2ebfa5 {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: #4d0000;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
 .container .userInfo .userHeader .headerRight.data-v-7c2ebfa5 {
   font-size: 28rpx;
   padding: 10rpx 20rpx;
-  color: #FFFBF2;
+  color: #fffbf2;
   background-color: #4d0000;
   border-radius: 10rpx;
 }
@@ -115,7 +125,7 @@
 }
 .container .set .item .itemRight.data-v-7c2ebfa5::after {
   position: absolute;
-  content: "\203A";
+  content: '\203A';
   font-size: 58rpx;
   right: 0%;
   top: 0%;

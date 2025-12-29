@@ -5,7 +5,7 @@ const _sfc_main = {
   methods: {
     goIncense() {
       common_vendor.index.navigateTo({
-        url: "/secondPages/incense/incense"
+        url: "/secondPages/generateimg/generateimg"
       });
     }
   }

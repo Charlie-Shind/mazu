@@ -1,8 +1,6 @@
 <template>
-	<!-- pageBack 放在最外层第一个位置 -->
 	<pageBack :titleInfo="titleInfo"></pageBack>
 
-	<!-- 核心内容统一包裹在.content容器中 -->
 	<view class="content">
 		<view class="ai-workshop">
 			<view class="title-bar">
@@ -126,7 +124,7 @@ export default {
 			extraDemand: '',
 			isLoading: false,
 			imageUrl: '',
-			countdown: 1, // 1. 倒计时初始值改为1（正数开始）
+			countdown: 1,
 			countdownTimer: null,
 			sampleList: [],
 			scrollX: 0,
@@ -168,12 +166,11 @@ export default {
 			this.imageUrl = '';
 			uni.showToast({ title: '已清除当前结果', icon: 'none' });
 		},
-		// 2. 倒计时改为正数递增（核心修改）
 		initCountdown() {
-			this.countdown = 1; // 从1开始计数
+			this.countdown = 1;
 			if (this.countdownTimer) clearInterval(this.countdownTimer);
 			this.countdownTimer = setInterval(() => {
-				this.countdown++; // 每秒加1（正数递增）
+				this.countdown++;
 			}, 1000);
 		},
 		clearCountdown() {
@@ -288,14 +285,11 @@ export default {
 			this.isScrolling = false;
 			this.scrollTimer && (clearInterval(this.scrollTimer), (this.scrollTimer = null));
 		},
-		// 3. 极简获取轮播图数据（原样赋值，不过滤）
 		async getMazuCarousel() {
 			const res = await request({ url: '/user/image/mazuCarousel', method: 'get' });
-			// 直接赋值接口返回的data，保留所有字段（包括status/style为null的项）
 			if (res && res.data && Array.isArray(res.data)) {
 				this.sampleList = res.data;
 			} else {
-				// 接口返回异常时用兜底数据
 				this.sampleList = [
 					{ id: 91, url: 'https://javaweb-ai-ch.oss-cn-beijing.aliyuncs.com/2025/12/盲盒_bdbd71e5-9989-4a77-975d-a3bf704d0b2a.png', prompt: '盲盒，卡通风格，平安' },
 					{ id: 1, url: 'https://javaweb-ai-ch.oss-cn-beijing.aliyuncs.com/2025/12/妈祖IP_c99e1313-10d5-4c9d-83ec-47c4cfe6440d.png', prompt: '妈祖IP，传统国风，出海顺遂' },
