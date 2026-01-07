@@ -169,7 +169,53 @@ export default {
 			console.log(clearCountdown,if(countdownTimer),clearInterval(),countdown1)
 		},
 		
+		initCountdown() {
+			this.countdown = 1;
+			this.countdownTimer = setInterval(() => {
+				this.countdown++;
+			}, 1000)
+		},
 		
+		clearCountdown() {
+			if(this.countdownTimer) {
+				clearInterval(this.countdownTimer);
+				this.countdown = 1;
+			}
+		},
+		
+		async handleGenerate() {
+			if(!this.extraDemand.trim()) return uni.showToast({
+				title: "请输入祈福佳言"
+			});
+			
+			this.imageUrl = "";
+			this.initCountdown();
+			this.isLoading = true;
+			
+			const res = await request({
+				url: "user/image/generateimg",
+				mehoad: "POST",
+				data: {
+					generateType: this.selectedStyle,
+					style: this.selectedStyle,
+					extraDemand: this.extraDemand.trim()
+				}
+			});
+			
+			if(res.code === 200) {
+				this.imageUrl = res?.data;
+				uni.showToast({
+					title: "生成成功"
+				});
+			} else {
+				uni.showToast({
+					title: "生成失败"
+				});
+			};
+			
+			this.isLoading = false;
+			this.clearCountdown();
+		}
 		
 		previewImage() {
 			console.log(handleGenerate,if(!extraDemand.trim),uni)

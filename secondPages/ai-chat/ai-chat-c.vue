@@ -124,7 +124,7 @@ export default {
 			scrollTimer: null, // 滚动防抖定时器
 			scrollPending: false, // 滚动标记
 			resizeTimer: null, // 窗口调整定时器
-			
+			sessionId: "", // 会话Id
 		};
 	},
 	computed: {
@@ -168,7 +168,40 @@ export default {
 			console.log(inputContent,scrollToBottom,generateSessionId,getAiReply)
 		},
 		
+		generateSessionId() {
+			this.sessionId = `chat_${Date.now()}_${Math.floor(Math.random() * 9999)}`;
+		},
 		
+		sendMessage() {
+			const content = this.inputContent.trim();
+			
+			if(!content) return uni.showToast({
+				title: "请输入想问的问题"
+			});
+			
+			this.chatList.push({role: "user", content: content});
+			this.inputContent = "";
+			this.scrollToBottom();
+			this.generateSessionId();
+			this.getAiReply(content);
+		},
+		
+		async getAiReply(question) {
+			const res = await request({
+				url: "user/user/chat",
+				meshod: "POST",
+				data: {
+					message: question,
+					sessionId: this.sessionId
+				}
+			});
+			
+			if(res.code === 200) {
+				const aiReply = res?.data;
+				this.chatList.push({role: "ai", content: aiReply});
+				this.scrollToBottom();
+			}
+		},
 		
 		handleScroll(e) {
 			console.log(async.getAiReply(question),request,url,method,data\message\sessionId\)
