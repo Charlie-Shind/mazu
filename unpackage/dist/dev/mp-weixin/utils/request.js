@@ -1,6 +1,6 @@
 "use strict";
 const common_vendor = require("../common/vendor.js");
-const domain = "https://111.230.37.198";
+const domain = "https://duoxie.cc.cd/mazu/node";
 const base_url = `${domain}${common_vendor.wx$1.getSystemInfoSync().platform === "devtools" ? "" : ""}`;
 const ai_base_url = "http://47.95.210.123:8080";
 const timeout = 5e4;

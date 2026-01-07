@@ -43,16 +43,15 @@
 			<view class="shop">
 				<view class="pubuBox">
 					<view class="pubuItem">
-						<!-- v-for列表循环 -->
+						<!-- v-for列表循环 ✅核心修改：判断是否公益分类，切换静态图/接口图 -->
 						<view class="item-masonry" v-for="(item, index) in list" :key="index" @click="toShowDetail(item.id)">
-							<image :lazy-load="true" :src="item.imageUrl[0]" mode="aspectFill"></image>
+							<image :lazy-load="true" :src="activeGridName === '公益' ? staticImgList[index % staticImgList.length] : item.imageUrl[0]" mode="aspectFill"></image>
 							<view class="listtitle">
-								<!-- 这是没有高度的父盒子（下半部分） -->
 								<view class="listtitle2">
 									{{ item.shopname }}
 								</view>
 								<view class="listtitle3">
-									<text>香火值</text>
+									<text>爱心值</text>
 									{{ formatPrice(item.price) }}
 								</view>
 							</view>
@@ -84,7 +83,19 @@ export default {
 			list: [],
 			recommendList: [],
 			gridList: [],
-			activeIndex: 0
+			activeIndex: 0,
+			activeGridName: '全部', // ✅新增：记录当前选中的分类名称
+			// ✅新增：你的8张公益静态图片地址 完整保留
+			staticImgList: [
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/80e2fd9ef24effee752512adfa510fa9.jpg",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/ff59f72d6dd7553974a67b0f9bdeaa5f.jpg",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/dc5eeb8220085d40ac92870d36e25f47.jpg",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/ce99e3bb8a518c78e125db3e679b1c54.jpg",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/4ef8a58c70eaa82f2b7bbabc78e5f022.jpg",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/99ab73a598a00013403781c59b2dfe24.png",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/a78c50ef3df1256278ab813f380b76f3.png",
+				"https://java-ai-ch.oss-cn-beijing.aliyuncs.com/3e66ba63898238a9704182b0701819d5.png"
+			]
 		};
 	},
 	onLoad() {
@@ -102,33 +113,35 @@ export default {
 		IncenseFab
 	},
 	methods: {
-		// ========== 新增：价格格式化方法 ==========
+		// ========== 价格格式化方法 ==========
 		formatPrice(price) {
-			// 完整的容错处理，避免 toFixed 报错
 			const num = Number(price);
-			// 如果转换失败（非数字），返回 0.00
 			return isNaN(num) ? '0.00' : num.toFixed(2);
 		},
-		// ========== 原有方法 ==========
-		// 洗牌算法 进行随机操作
+		// ========== 洗牌算法 进行随机操作 ==========
 		randomRecommendList(count) {
-			const shuffled = [...this.list];
+			// 第一步：先过滤掉 分类为【公益】的商品，公益项目彻底不参与轮播
+			const filterNoPublic = [...this.list].filter(item => item.grid !== '公益');
+			// 第二步：对过滤后的非公益商品数组，执行原有的洗牌随机排序算法
+			const shuffled = [...filterNoPublic];
 			for (let i = shuffled.length - 1; i > 0; i--) {
 				const j = Math.floor(Math.random() * (i + 1));
 				[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
 			}
+			// 第三步：截取指定数量的随机商品返回
 			return shuffled.slice(0, count);
 		},
+		// ✅修改：新增记录当前选中的分类名称
 		setActiveGrid(index, item) {
 			this.activeIndex = index;
+			this.activeGridName = item.grid; // 记录当前点击的分类名称
 			gridSearchShopAPI(item.grid)
 				.then((res) => {
-					// 容错：判断 res.message 是否存在
 					if (res && res.message) {
 						this.list = res.message.map((item) => {
 							return {
 								...item,
-								imageUrl: JSON.parse(item.imageUrl || '[]') // 容错：imageUrl 为空时解析为空数组
+								imageUrl: JSON.parse(item.imageUrl || '[]')
 							};
 						});
 					} else {
@@ -144,45 +157,37 @@ export default {
 		getGrid() {
 			getShopGridAPI()
 				.then((res) => {
-					// 容错1：判断 res.message 是否存在
 					const originalList = res?.message || [];
-					// 过滤掉 "其他" 分类
 					const filteredList = originalList.filter((item) => item?.grid !== '其他');
 
-					// 修复核心：shuffleArray 函数必须返回打乱后的数组
 					const shuffleArray = (array) => {
-						// 先复制数组，避免修改原数组
 						const newArray = [...array];
 						for (let i = newArray.length - 1; i > 0; i--) {
 							const j = Math.floor(Math.random() * (i + 1));
-							[newArray[i], newArray[j]] = [newArray[j], newArray[i]]; // 交换元素
+							[newArray[i], newArray[j]] = [newArray[j], newArray[i]];
 						}
-						return newArray; // 关键：返回打乱后的数组
+						return newArray;
 					};
 
-					// 容错2：打乱前判断数组是否为空
 					const shuffledList = shuffleArray(filteredList);
-					// 容错3：slice 前判断数组是否为空，避免 undefined.slice 报错
 					const selectedItems = shuffledList.length > 0 ? shuffledList.slice(0, 3) : [];
 
 					this.gridList = [{ grid: '全部' }, ...selectedItems, { grid: '其他' }];
 				})
 				.catch((err) => {
 					console.error('获取分类列表失败：', err);
-					// 出错时设置默认分类
-				this.gridList = [{ grid: '全部' }, { grid: '其他' }];
+					this.gridList = [{ grid: '全部' }, { grid: '其他' }];
 				});
 		},
 		// 获取商品数据
 		getShopList() {
 			getShopListAPI()
 				.then((res) => {
-					// 容错：判断 res.message 是否存在
 					if (res && res.message) {
 						this.list = res.message.map((item) => {
 							return {
 								...item,
-								imageUrl: JSON.parse(item.imageUrl || '[]') // 容错：imageUrl 为空时解析为空数组
+								imageUrl: JSON.parse(item.imageUrl || '[]')
 							};
 						});
 						this.recommendList = this.randomRecommendList(5);

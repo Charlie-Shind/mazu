@@ -11,7 +11,7 @@
 		<view class="contentInfo">
 			<view class="price">
 				<view class="">
-					<text>{{ contentInfo[0]?.grid === '公益' ? '捐款金额' : '香火值' }}</text><text style="margin: 0 10rpx;">{{contentInfo[0]?.price}}</text><text>{{ contentInfo[0]?.grid === '公益' ? '元' : '兑换' }}</text>
+					<text>{{ contentInfo[0]?.grid === '公益' ? '捐款金额' : '爱心值' }}</text><text style="margin: 0 10rpx;">{{contentInfo[0]?.price}}</text><text>{{ contentInfo[0]?.grid === '公益' ? '元' : '兑换' }}</text>
 				</view>
 			</view>
 			<view class="shopName">

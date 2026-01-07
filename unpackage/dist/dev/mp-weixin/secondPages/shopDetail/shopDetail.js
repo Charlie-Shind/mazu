@@ -111,7 +111,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       };
     }),
-    c: common_vendor.t(((_a = $data.contentInfo[0]) == null ? void 0 : _a.grid) === "公益" ? "捐款金额" : "香火值"),
+    c: common_vendor.t(((_a = $data.contentInfo[0]) == null ? void 0 : _a.grid) === "公益" ? "捐款金额" : "爱心值"),
     d: common_vendor.t((_b = $data.contentInfo[0]) == null ? void 0 : _b.price),
     e: common_vendor.t(((_c = $data.contentInfo[0]) == null ? void 0 : _c.grid) === "公益" ? "元" : "兑换"),
     f: ((_d = $data.contentInfo[0]) == null ? void 0 : _d.grid) !== "公益"

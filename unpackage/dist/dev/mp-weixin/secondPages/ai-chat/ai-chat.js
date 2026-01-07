@@ -174,7 +174,7 @@ const _sfc_main = {
         }, 1500);
         this.scrollToBottom();
       } catch (error) {
-        common_vendor.index.__f__("error", "at secondPages/ai-chat/ai-chat.vue:263", "AI接口调用失败：", error);
+        common_vendor.index.__f__("error", "at secondPages/ai-chat/ai-chat.vue:256", "AI接口调用失败：", error);
         this.removeAiLoading();
         this.chatList.push({
           role: "ai",

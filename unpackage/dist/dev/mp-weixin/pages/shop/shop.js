@@ -18,7 +18,20 @@ const _sfc_main = {
       list: [],
       recommendList: [],
       gridList: [],
-      activeIndex: 0
+      activeIndex: 0,
+      activeGridName: "全部",
+      // ✅新增：记录当前选中的分类名称
+      // ✅新增：你的8张公益静态图片地址 完整保留
+      staticImgList: [
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/80e2fd9ef24effee752512adfa510fa9.jpg",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/ff59f72d6dd7553974a67b0f9bdeaa5f.jpg",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/dc5eeb8220085d40ac92870d36e25f47.jpg",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/ce99e3bb8a518c78e125db3e679b1c54.jpg",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/4ef8a58c70eaa82f2b7bbabc78e5f022.jpg",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/99ab73a598a00013403781c59b2dfe24.png",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/a78c50ef3df1256278ab813f380b76f3.png",
+        "https://java-ai-ch.oss-cn-beijing.aliyuncs.com/3e66ba63898238a9704182b0701819d5.png"
+      ]
     };
   },
   onLoad() {
@@ -36,37 +49,38 @@ const _sfc_main = {
     IncenseFab
   },
   methods: {
-    // ========== 新增：价格格式化方法 ==========
+    // ========== 价格格式化方法 ==========
     formatPrice(price) {
       const num = Number(price);
       return isNaN(num) ? "0.00" : num.toFixed(2);
     },
-    // ========== 原有方法 ==========
-    // 洗牌算法 进行随机操作
+    // ========== 洗牌算法 进行随机操作 ==========
     randomRecommendList(count) {
-      const shuffled = [...this.list];
+      const filterNoPublic = [...this.list].filter((item) => item.grid !== "公益");
+      const shuffled = [...filterNoPublic];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       return shuffled.slice(0, count);
     },
+    // ✅修改：新增记录当前选中的分类名称
     setActiveGrid(index, item) {
       this.activeIndex = index;
+      this.activeGridName = item.grid;
       apis_shop.gridSearchShopAPI(item.grid).then((res) => {
         if (res && res.message) {
           this.list = res.message.map((item2) => {
             return {
               ...item2,
               imageUrl: JSON.parse(item2.imageUrl || "[]")
-              // 容错：imageUrl 为空时解析为空数组
             };
           });
         } else {
           this.list = [];
         }
       }).catch((err) => {
-        common_vendor.index.__f__("error", "at pages/shop/shop.vue:139", "分类查询失败：", err);
+        common_vendor.index.__f__("error", "at pages/shop/shop.vue:152", "分类查询失败：", err);
         this.list = [];
       });
     },
@@ -87,7 +101,7 @@ const _sfc_main = {
         const selectedItems = shuffledList.length > 0 ? shuffledList.slice(0, 3) : [];
         this.gridList = [{ grid: "全部" }, ...selectedItems, { grid: "其他" }];
       }).catch((err) => {
-        common_vendor.index.__f__("error", "at pages/shop/shop.vue:171", "获取分类列表失败：", err);
+        common_vendor.index.__f__("error", "at pages/shop/shop.vue:178", "获取分类列表失败：", err);
         this.gridList = [{ grid: "全部" }, { grid: "其他" }];
       });
     },
@@ -99,7 +113,6 @@ const _sfc_main = {
             return {
               ...item,
               imageUrl: JSON.parse(item.imageUrl || "[]")
-              // 容错：imageUrl 为空时解析为空数组
             };
           });
           this.recommendList = this.randomRecommendList(5);
@@ -108,14 +121,14 @@ const _sfc_main = {
           this.recommendList = [];
         }
       }).catch((err) => {
-        common_vendor.index.__f__("error", "at pages/shop/shop.vue:195", "获取商品列表失败：", err);
+        common_vendor.index.__f__("error", "at pages/shop/shop.vue:200", "获取商品列表失败：", err);
         this.list = [];
         this.recommendList = [];
       });
     },
     // 获取商品页面
     toShowDetail(id) {
-      common_vendor.index.__f__("log", "at pages/shop/shop.vue:202", id);
+      common_vendor.index.__f__("log", "at pages/shop/shop.vue:207", id);
       common_vendor.index.navigateTo({
         url: `/secondPages/shopDetail/shopDetail?shopId=${id}`
       });
@@ -165,7 +178,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     e: common_vendor.f($data.list, (item, index, i0) => {
       return {
-        a: item.imageUrl[0],
+        a: $data.activeGridName === "公益" ? $data.staticImgList[index % $data.staticImgList.length] : item.imageUrl[0],
         b: common_vendor.t(item.shopname),
         c: common_vendor.t($options.formatPrice(item.price)),
         d: index,

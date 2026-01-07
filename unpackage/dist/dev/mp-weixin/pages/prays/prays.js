@@ -12,8 +12,9 @@ const _sfc_main = {
         heightShow: false
       },
       isShaking: false,
-      isProcessing: false
+      isProcessing: false,
       // 新增状态变量
+      randomNumber: 0
     };
   },
   components: {
@@ -21,33 +22,23 @@ const _sfc_main = {
     IncenseFab
   },
   onLoad() {
-    this.checkFirstVisit();
+    setTimeout(() => {
+      this.$refs.firstVisitPopup.open();
+    }, 300);
   },
   onShow() {
     this.startShakeListener();
-    common_vendor.index.__f__("log", "at pages/prays/prays.vue:67", "我被触发辣1");
+    common_vendor.index.__f__("log", "at pages/prays/prays.vue:61", "我被触发辣1");
   },
   onHide() {
     this.stopShakeListener();
-    common_vendor.index.__f__("log", "at pages/prays/prays.vue:71", "我被触发辣2");
+    common_vendor.index.__f__("log", "at pages/prays/prays.vue:65", "我被触发辣2");
   },
   methods: {
     /**
-     * 检查是否首次进入
-     */
-    checkFirstVisit() {
-      const hasVisited = common_vendor.index.getStorageSync("prays_first_visit");
-      if (!hasVisited) {
-        setTimeout(() => {
-          this.$refs.firstVisitPopup.open();
-        }, 300);
-      }
-    },
-    /**
-     * 关闭首次进入弹窗
+     * 关闭提示弹窗 ✅ 修改2：只关闭弹窗，删除缓存存储逻辑
      */
     closeFirstVisitPopup() {
-      common_vendor.index.setStorageSync("prays_first_visit", true);
       this.$refs.firstVisitPopup.close();
     },
     startShakeListener() {

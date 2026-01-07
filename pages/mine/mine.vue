@@ -8,15 +8,15 @@
 		<view class="container">
 			<view class="userInfo" v-if="userInfo && Object.keys(userInfo).length > 0">
 				<view class="userHeader">
-					<view class="headerLeft" @click="toSet">
+					<view class="headerLeft">
 						<image :src="userInfo.avatarurl" mode=""></image>
 						<view class="name">
 							<view>
 								{{ userInfo.nickname }}
 							</view>
 							<view>已连续签到{{ signDays }}天</view>
-							<view>当前香火值：{{ userInfo.balance || 0 }} 点</view>
-							<view class="incenseBtn" @click="toIncensePage">获得香火值</view>
+							<view>当前爱心值：{{ userInfo.balance || 0 }} 点</view>
+							<view class="incenseBtn" @click="toIncensePage">获得爱心值</view>
 						</view>
 					</view>
 					<view class="headerRight" @click="signIn()">立即签到</view>

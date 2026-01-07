@@ -79,7 +79,7 @@
 							</template>
 						</view>
 						<view class="price">
-							{{ contentInfo[0]?.grid === '公益' ? '捐赠金额' : '香火值' }} {{contentInfo[0]?.price}} <text>x1</text>
+							{{ contentInfo[0]?.grid === '公益' ? '捐赠金额' : '爱心值' }} {{contentInfo[0]?.price}} <text>x1</text>
 						</view>
 					</view>
 				</view>
@@ -87,7 +87,7 @@
 			<view class="separate"></view>
 			<view class="count">
 				<view class="">
-					<text>{{ contentInfo[0]?.grid === '公益' ? '捐赠金额款项' : '商品合计（香火值）' }}</text>
+					<text>{{ contentInfo[0]?.grid === '公益' ? '捐赠金额款项' : '商品合计（爱心值）' }}</text>
 					<text>{{contentInfo[0]?.price}}</text>
 				</view>
 				<view class="" v-if="contentInfo[0]?.grid !== '公益'">
@@ -107,7 +107,7 @@
 		<view class="tab" :class="{ isIos: isIos }">
 			<view class="view">
 				<view class="collection">
-					{{ contentInfo[0]?.grid === '公益' ? '所需捐赠金额' : '所需香火值' }} <text>{{contentInfo[0]?.price}}</text>
+					{{ contentInfo[0]?.grid === '公益' ? '所需捐赠金额' : '所需爱心值' }} <text>{{contentInfo[0]?.price}}</text>
 				</view>
 				<view class="buy" @click="commitOrder">
 					{{ contentInfo[0]?.grid === '公益' ? '提交捐赠' : '提交兑换' }}

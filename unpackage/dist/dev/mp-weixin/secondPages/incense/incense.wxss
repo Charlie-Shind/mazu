@@ -22,7 +22,6 @@
   overflow: hidden;
   background-color: #fff;
   break-inside: avoid;
-  /*避免在元素内部插入分页符*/
   box-sizing: border-box;
   margin-bottom: 20rpx;
   box-shadow: 0px 0px 28rpx 1rpx rgba(78, 101, 153, 0.07);
@@ -84,4 +83,61 @@
   width: 52rpx;
   height: 52rpx;
   left: 4%;
+}
+.first-visit-popup.data-v-e5e4e616 {
+  width: 600rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 10rpx 40rpx rgba(0, 0, 0, 0.15);
+}
+.first-visit-popup .popup-header.data-v-e5e4e616 {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4a574 0%, #c8965e 100%);
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.2);
+}
+.first-visit-popup .popup-header .popup-title.data-v-e5e4e616 {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.first-visit-popup .popup-content.data-v-e5e4e616 {
+  padding: 40rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200rpx;
+}
+.first-visit-popup .popup-content .popup-text.data-v-e5e4e616 {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.first-visit-popup .popup-content .popup-text.data-v-e5e4e616:last-child {
+  margin-bottom: 0;
+  color: #d4a574;
+  font-weight: 500;
+}
+.first-visit-popup .popup-footer.data-v-e5e4e616 {
+  border-top: 1rpx solid #eee;
+}
+.first-visit-popup .popup-footer .popup-btn.data-v-e5e4e616 {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #d4a574 0%, #c8965e 100%);
+  transition: all 0.2s;
+}
+.first-visit-popup .popup-footer .popup-btn.data-v-e5e4e616:active {
+  opacity: 0.8;
 }

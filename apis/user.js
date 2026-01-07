@@ -116,7 +116,7 @@ export const getContinuousSignInDaysAPI = (openid) => {
 	})
 }
 
-// 模拟微信支付供奉香火，成功后累积香火值
+// 模拟微信支付供奉香火，成功后累积爱心值
 export const incensePayAPI = ({
 	user_id,
 	amount,

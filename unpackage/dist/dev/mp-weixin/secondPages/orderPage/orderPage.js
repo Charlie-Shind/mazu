@@ -15,7 +15,7 @@ const _sfc_main = {
       },
       patMent: [{
         id: 1,
-        name: `香火值兑换（可用：${store_userInfo.useUserInfoStore().$state.userInfo.balance}）`,
+        name: `爱心值兑换（可用：${store_userInfo.useUserInfoStore().$state.userInfo.balance}）`,
         svg: "/static/shopPay.svg"
       }],
       price: null,
@@ -110,8 +110,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     a: common_vendor.p({
       titleInfo: $data.titleInfo
     }),
-    b: common_vendor.t($data.grid === "公益" ? "捐赠所需金额" : "兑换所需香火值"),
-    c: common_vendor.t($data.grid === "公益" ? "金额" : "香火值"),
+    b: common_vendor.t($data.grid === "公益" ? "捐赠所需金额" : "兑换所需爱心值"),
+    c: common_vendor.t($data.grid === "公益" ? "金额" : "爱心值"),
     d: common_vendor.t($data.price),
     e: common_vendor.f($data.patMent, (item, k0, i0) => {
       return {

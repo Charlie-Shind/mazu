@@ -113,7 +113,6 @@ export default {
 			inputContent: '',
 			chatList: [],
 			scrollTop: 0,
-			sessionId: '',
 			isLoading: false, // AI加载状态
 			isSending: false, // 用户发送状态
 			scrollHeight: 0,
@@ -124,7 +123,8 @@ export default {
 			statusTimer: null, // 状态提示定时器
 			scrollTimer: null, // 滚动防抖定时器
 			scrollPending: false, // 滚动标记
-			resizeTimer: null // 窗口调整定时器
+			resizeTimer: null, // 窗口调整定时器
+			
 		};
 	},
 	computed: {
@@ -134,10 +134,6 @@ export default {
 			const avatar = userInfo.value?.avatar || uni.getStorageSync('userAvatar') || '/static/user-avatar.png';
 			return avatar;
 		}
-	},
-	onLoad() {
-		this.generateSessionId();
-		this.initChatHeight();
 	},
 	onUnload() {
 		clearTimeout(this.inputTimer);
@@ -165,13 +161,18 @@ export default {
 					const windowHeight = res.windowHeight;
 					const safeBottom = res.safeAreaInsets?.bottom || 0;
 					this.chatContentHeight = `${windowHeight - 160 - safeBottom}px`;
+					console.log(sessionId,generateSessionId)
 				}
 			});
+			console.log(sendMessage,content,inputContent.trim,if,chatList)
+			console.log(inputContent,scrollToBottom,generateSessionId,getAiReply)
 		},
-		generateSessionId() {
-			this.sessionId = `chat_${Date.now()}_${Math.floor(Math.random() * 9999)}`;
-		},
+		
+		
+		
 		handleScroll(e) {
+			console.log(async.getAiReply(question),request,url,method,data\message\sessionId\)
+			console.log(if,aiReply,chatList,scrollToBottom)
 			if (!this.scrollTimer) {
 				this.scrollTimer = setTimeout(() => {
 					this.scrollHeight = e.detail.scrollHeight;
@@ -180,9 +181,12 @@ export default {
 				}, 50);
 			}
 		},
+		
+		
 		handleInput() {
 			clearTimeout(this.inputTimer);
 			clearTimeout(this.statusTimer);
+
 			if (this.inputContent.trim()) {
 				this.showStatusTip = true;
 				this.statusTipText = '你正在输入...';
@@ -193,79 +197,16 @@ export default {
 				this.showStatusTip = false;
 			}
 		},
-		sendMessage() {
-			const content = this.inputContent.trim();
-			if (!content || this.isLoading || this.isSending) return;
-			this.isSending = true;
-			this.showStatusTip = true;
-			this.statusTipText = '正在发送消息...';
-			this.chatList.push({
-				role: 'user',
-				content: content
-			});
-			this.inputContent = '';
-			this.scrollToBottom();
-			setTimeout(() => {
-				this.isSending = false;
-				this.showAiLoading();
-				this.getAiReply(content);
-			}, 300);
-		},
 		showAiLoading() {
 			this.isLoading = true;
 			this.showStatusTip = true;
 			this.statusTipText = '小默正在思考...';
-			const lastItem = this.chatList[this.chatList.length - 1];
-			if (!lastItem || lastItem.role !== 'ai-loading') {
-				this.chatList.push({
-					role: 'ai-loading'
-				});
-			}
+			this.chatList.push({ role: 'ai-loading' });
 			this.scrollToBottom();
 		},
 		removeAiLoading() {
 			this.isLoading = false;
 			this.chatList = this.chatList.filter((item) => item.role !== 'ai-loading');
-		},
-		async getAiReply(question) {
-			try {
-				const res = await request({
-					url: '/user/user/chat',
-					method: 'POST',
-					data: {
-						message: question,
-						sessionId: this.sessionId,
-						tenantId: uni.getStorageSync('tenantId') || 'xxx'
-					},
-					useAiUrl: true,
-					timeout: 20000
-				});
-				this.removeAiLoading();
-				const aiReply = res?.reply || res?.data?.reply || '抱歉，我暂时无法回答这个问题';
-				this.chatList.push({
-					role: 'ai',
-					content: aiReply
-				});
-				this.showStatusTip = true;
-				this.statusTipText = '小默已回复';
-				this.statusTimer = setTimeout(() => {
-					this.showStatusTip = false;
-				}, 1500);
-				this.scrollToBottom();
-			} catch (error) {
-				console.error('AI接口调用失败：', error);
-				this.removeAiLoading();
-				this.chatList.push({
-					role: 'ai',
-					content: this.getErrorMsg(error)
-				});
-				this.showStatusTip = true;
-				this.statusTipText = '回复失败';
-				this.statusTimer = setTimeout(() => {
-					this.showStatusTip = false;
-				}, 2000);
-				this.scrollToBottom();
-			}
 		},
 		getErrorMsg(error) {
 			if (error.errMsg?.includes('timeout')) return '请求超时啦😥，请检查网络后重试～';
@@ -277,14 +218,7 @@ export default {
 		},
 		parseLineBreak(content) {
 			if (!content) return '';
-			return content
-				.replace(/&/g, '&amp;')
-				.replace(/</g, '&lt;')
-				.replace(/>/g, '&gt;')
-				.replace(/"/g, '&quot;')
-				.replace(/'/g, '&#39;')
-				.replace(/↵/g, '<br/>')
-				.replace(/\n/g, '<br/>');
+			return content.replace(/\n/g, '<br/>').replace(/↵/g, '<br/>');
 		},
 		scrollToBottom() {
 			this.$nextTick(() => {
@@ -295,9 +229,7 @@ export default {
 						query
 							.select('.chat-content')
 							.boundingClientRect((rect) => {
-								if (rect) {
-									this.scrollTop = rect.scrollHeight || 999999;
-								}
+								if (rect) this.scrollTop = rect.scrollHeight;
 							})
 							.exec(() => {
 								this.scrollPending = false;

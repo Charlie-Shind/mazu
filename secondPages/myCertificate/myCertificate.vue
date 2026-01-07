@@ -7,16 +7,16 @@
 			<view class="container">
 				<!-- 未登录状态 -->
 				<view class="empty-state" v-if="!userInfo || !userInfo.id">
-					<text class="empty-icon">📜</text>
+					<text class="empty-icon"></text>
 					<text class="empty-text">请先登录查看证书</text>
 					<view class="login-btn" @click="toLogin">立即登录</view>
 				</view>
 
 				<!-- 已登录但未获得证书 -->
 				<view class="empty-state" v-else-if="!hasCertificate">
-					<text class="empty-icon">🏆</text>
+					<text class="empty-icon"></text>
 					<text class="empty-text">暂未获得证书</text>
-					<text class="empty-desc">累计捐献香火值达到 5000 点即可获得证书</text>
+					<text class="empty-desc">累计捐献爱心值达到 5000 点即可获得证书</text>
 					<view class="progress-box">
 						<view class="progress-label">
 							<text>当前进度：{{ userInfo.balance || 0 }} / 5000</text>
@@ -70,7 +70,7 @@
 								
 								<view class="info-wrapper">
 									<view class="info-item">
-										<text class="info-label">累计香火值</text>
+										<text class="info-label">累计爱心值</text>
 										<text class="info-value">{{ totalIncense || userInfo.balance }} 点</text>
 									</view>
 									<view class="info-item">
@@ -140,13 +140,13 @@
 					backShow: true
 				},
 				userInfo: {},
-				totalIncense: 0, // 总香火值（用于证书显示）
+				totalIncense: 0, // 总爱心值（用于证书显示）
 				certificateDate: '', // 获得证书日期
 				certificateImage: '' // 证书图片临时路径
 			};
 		},
 		computed: {
-			// 是否已获得证书（香火值 >= 5000）
+			// 是否已获得证书（爱心值 >= 5000）
 			hasCertificate() {
 				return this.userInfo && this.userInfo.balance >= 5000;
 			},
@@ -161,7 +161,7 @@
 			this.loadUserInfo();
 		},
 		onShow() {
-			// 每次显示页面时重新加载用户信息（可能香火值有更新）
+			// 每次显示页面时重新加载用户信息（可能爱心值有更新）
 			this.loadUserInfo();
 		},
 		// 小程序分享钩子
@@ -175,7 +175,7 @@
 		// 朋友圈分享钩子
 		onShareTimeline() {
 			return {
-				title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点香火值！`,
+				title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点爱心值！`,
 				imageUrl: this.certificateImage || ''
 			};
 		},
@@ -347,7 +347,7 @@
 					// 7. 绘制信息区域
 					ctx.setFontSize(72);
 					ctx.setFillStyle('#999');
-					ctx.fillText('累计香火值', w / 2 - 400, 1100);
+					ctx.fillText('累计爱心值', w / 2 - 400, 1100);
 					ctx.fillText('获得日期', w / 2 + 400, 1100);
 					
 					ctx.setFontSize(84);
@@ -437,7 +437,7 @@
 							} else if (res.tapIndex === 1) {
 								// 分享到朋友圈
 								uni.shareTimeline({
-									title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点香火值！`,
+									title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点爱心值！`,
 									imageUrl: imagePath,
 									success: () => {
 										uni.showToast({

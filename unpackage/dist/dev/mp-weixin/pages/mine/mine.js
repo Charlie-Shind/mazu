@@ -194,12 +194,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     e: common_vendor.t($data.signDays),
     f: common_vendor.t($data.userInfo.balance || 0),
     g: common_vendor.o((...args) => $options.toIncensePage && $options.toIncensePage(...args)),
-    h: common_vendor.o((...args) => $options.toSet && $options.toSet(...args)),
-    i: common_vendor.o(($event) => $options.signIn())
+    h: common_vendor.o(($event) => $options.signIn())
   } : {
-    j: common_vendor.o((...args) => $options.toLogin && $options.toLogin(...args))
+    i: common_vendor.o((...args) => $options.toLogin && $options.toLogin(...args))
   }, {
-    k: common_vendor.f($data.otherPage, (item, k0, i0) => {
+    j: common_vendor.f($data.otherPage, (item, k0, i0) => {
       return {
         a: item.svg,
         b: common_vendor.t(item.name),

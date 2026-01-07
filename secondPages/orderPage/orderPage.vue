@@ -3,10 +3,10 @@
 	<view class="content">
 		<view class="payMoney">
 			<view>
-					{{ grid === '公益' ? '捐赠所需金额' : '兑换所需香火值' }}
+					{{ grid === '公益' ? '捐赠所需金额' : '兑换所需爱心值' }}
 			</view>
 			<view class="money">
-					<text>{{ grid === '公益' ? '金额' : '香火值' }}</text>{{price}}
+					<text>{{ grid === '公益' ? '金额' : '爱心值' }}</text>{{price}}
 			</view>
 		</view>
 		<view class="payToast">
@@ -50,7 +50,7 @@
 				},
 				patMent: [{
 					id: 1,
-					name: `香火值兑换（可用：${useUserInfoStore().$state.userInfo.balance}）`,
+					name: `爱心值兑换（可用：${useUserInfoStore().$state.userInfo.balance}）`,
 					svg: "/static/shopPay.svg"
 				}],
 				price: null,
@@ -83,10 +83,10 @@
 					mask: true
 				});
 				setTimeout(() => {
-					// 公益商品特殊处理：直接成功，等价增加用户香火值
+					// 公益商品特殊处理：直接成功，等价增加用户爱心值
 					if (this.grid === '公益') {
 						uni.hideLoading();
-						// 等价增加用户香火值（捐赠金额=增加的香火值）
+						// 等价增加用户爱心值（捐赠金额=增加的爱心值）
 						const store = useUserInfoStore();
 						const donatedAmount = Number(this.price);
 						store.$state.userInfo.balance = Number(store.$state.userInfo.balance || 0) + donatedAmount;

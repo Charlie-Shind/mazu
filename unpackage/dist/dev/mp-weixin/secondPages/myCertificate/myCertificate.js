@@ -19,7 +19,7 @@ const _sfc_main = {
       },
       userInfo: {},
       totalIncense: 0,
-      // 总香火值（用于证书显示）
+      // 总爱心值（用于证书显示）
       certificateDate: "",
       // 获得证书日期
       certificateImage: ""
@@ -27,7 +27,7 @@ const _sfc_main = {
     };
   },
   computed: {
-    // 是否已获得证书（香火值 >= 5000）
+    // 是否已获得证书（爱心值 >= 5000）
     hasCertificate() {
       return this.userInfo && this.userInfo.balance >= 5e3;
     },
@@ -56,7 +56,7 @@ const _sfc_main = {
   // 朋友圈分享钩子
   onShareTimeline() {
     return {
-      title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点香火值！`,
+      title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点爱心值！`,
       imageUrl: this.certificateImage || ""
     };
   },
@@ -199,7 +199,7 @@ const _sfc_main = {
         ctx.fillText("心诚则灵，善念成真", w / 2, 940);
         ctx.setFontSize(72);
         ctx.setFillStyle("#999");
-        ctx.fillText("累计香火值", w / 2 - 400, 1100);
+        ctx.fillText("累计爱心值", w / 2 - 400, 1100);
         ctx.fillText("获得日期", w / 2 + 400, 1100);
         ctx.setFontSize(84);
         ctx.setFillStyle("#D4A574");
@@ -274,7 +274,7 @@ const _sfc_main = {
               });
             } else if (res.tapIndex === 1) {
               common_vendor.index.shareTimeline({
-                title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点香火值！`,
+                title: `我的妈祖功德证书，累计捐献${this.userInfo.balance || 0}点爱心值！`,
                 imageUrl: imagePath,
                 success: () => {
                   common_vendor.index.showToast({

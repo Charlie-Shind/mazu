@@ -44,12 +44,13 @@ const _sfc_main = {
   },
   onLoad() {
     apis_community.getCommunityItemAPI().then((res) => {
-      this.list = res.message.map((item) => {
+      let tempList = res.message.map((item) => {
         return {
           ...item,
           imageUrl: JSON.parse(item.imageUrl)
         };
       });
+      this.list = this.shuffleArray(tempList);
       this.refresh();
     });
     apis_community.getCommunityTopicAPI().then((res) => {
@@ -82,11 +83,12 @@ const _sfc_main = {
       });
     },
     shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
+      let newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
       }
-      return array;
+      return newArray;
     },
     detail(item) {
       common_vendor.index.navigateTo({
@@ -99,12 +101,13 @@ const _sfc_main = {
         mask: true
       });
       apis_community.getCommunityItemAPI().then((res) => {
-        this.list = res.message.map((item) => {
+        let tempList = res.message.map((item) => {
           return {
             ...item,
             imageUrl: JSON.parse(item.imageUrl)
           };
         });
+        this.list = this.shuffleArray(tempList);
         common_vendor.index.showToast({
           title: "刷新成功",
           icon: "success"

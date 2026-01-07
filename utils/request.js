@@ -1,5 +1,5 @@
-// const domain = 'https://duoxie.cc.cd/mazu';
-const domain = 'https://111.230.37.198';
+const domain = 'https://duoxie.cc.cd/mazu/node';
+// const domain = 'https://111.230.37.198';
 // 正确拼接base_url（区分环境端口）
 export const base_url = `${domain}${wx.getSystemInfoSync().platform === 'devtools' ? '' : ''}`;
 export const ai_base_url = 'http://47.95.210.123:8080';

@@ -132,13 +132,15 @@ export default {
 	onLoad() {
 		// 获取推荐数据
 		getCommunityItemAPI().then((res) => {
-			this.list = res.message.map((item) => {
+			let tempList = res.message.map((item) => {
 				return {
 					...item,
 					imageUrl: JSON.parse(item.imageUrl)
 				};
 			});
-			this.refresh();
+			// 首次加载时随机排序文章列表
+			this.list = this.shuffleArray(tempList);
+			this.refresh(); // 保留原有刷新调用，不影响逻辑
 		});
 		// 获取话题
 		getCommunityTopicAPI().then((res) => {
@@ -173,11 +175,13 @@ export default {
 			});
 		},
 		shuffleArray(array) {
-			for (let i = array.length - 1; i > 0; i--) {
+			// 深拷贝数组，避免修改原数组
+			let newArray = [...array];
+			for (let i = newArray.length - 1; i > 0; i--) {
 				const j = Math.floor(Math.random() * (i + 1));
-				[array[i], array[j]] = [array[j], array[i]];
+				[newArray[i], newArray[j]] = [newArray[j], newArray[i]];
 			}
-			return array;
+			return newArray;
 		},
 		detail(item) {
 			uni.navigateTo({
@@ -192,12 +196,14 @@ export default {
 
 			getCommunityItemAPI()
 				.then((res) => {
-					this.list = res.message.map((item) => {
+					let tempList = res.message.map((item) => {
 						return {
 							...item,
 							imageUrl: JSON.parse(item.imageUrl)
 						};
 					});
+					// 刷新时也随机排序文章列表
+					this.list = this.shuffleArray(tempList);
 
 					uni.showToast({
 						title: '刷新成功',
@@ -218,13 +224,11 @@ export default {
 			uni.showLoading({
 				title: '加载中'
 			});
-			uni
-				.navigateTo({
-					url: url
-				})
-				.finally(() => {
-					uni.hideLoading();
-				});
+			uni.navigateTo({
+				url: url
+			}).finally(() => {
+				uni.hideLoading();
+			});
 		}
 	},
 	onPageScroll(e) {

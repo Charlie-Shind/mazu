@@ -161,9 +161,9 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     y: ((_o = $data.contentInfo[0]) == null ? void 0 : _o.grid) === "公益"
   }, ((_p = $data.contentInfo[0]) == null ? void 0 : _p.grid) === "公益" ? {} : {}, {
-    z: common_vendor.t(((_q = $data.contentInfo[0]) == null ? void 0 : _q.grid) === "公益" ? "捐赠金额" : "香火值"),
+    z: common_vendor.t(((_q = $data.contentInfo[0]) == null ? void 0 : _q.grid) === "公益" ? "捐赠金额" : "爱心值"),
     A: common_vendor.t((_r = $data.contentInfo[0]) == null ? void 0 : _r.price),
-    B: common_vendor.t(((_s = $data.contentInfo[0]) == null ? void 0 : _s.grid) === "公益" ? "捐赠金额款项" : "商品合计（香火值）"),
+    B: common_vendor.t(((_s = $data.contentInfo[0]) == null ? void 0 : _s.grid) === "公益" ? "捐赠金额款项" : "商品合计（爱心值）"),
     C: common_vendor.t((_t = $data.contentInfo[0]) == null ? void 0 : _t.price),
     D: ((_u = $data.contentInfo[0]) == null ? void 0 : _u.grid) !== "公益"
   }, ((_v = $data.contentInfo[0]) == null ? void 0 : _v.grid) !== "公益" ? {} : {}, {
@@ -176,7 +176,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     I: $data.note,
     J: common_vendor.o(($event) => $data.note = $event.detail.value)
   } : {}, {
-    K: common_vendor.t(((_C = $data.contentInfo[0]) == null ? void 0 : _C.grid) === "公益" ? "所需捐赠金额" : "所需香火值"),
+    K: common_vendor.t(((_C = $data.contentInfo[0]) == null ? void 0 : _C.grid) === "公益" ? "所需捐赠金额" : "所需爱心值"),
     L: common_vendor.t((_D = $data.contentInfo[0]) == null ? void 0 : _D.price),
     M: common_vendor.t(((_E = $data.contentInfo[0]) == null ? void 0 : _E.grid) === "公益" ? "提交捐赠" : "提交兑换"),
     N: common_vendor.o((...args) => $options.commitOrder && $options.commitOrder(...args)),
